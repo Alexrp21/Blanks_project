@@ -54,7 +54,10 @@ export default {
         },
         sendToCurrentMail () {
             this.$refs.card.validate();
-            bus.$emit('send-divs-data', this.emailAddress);
+            if (this.$route.name === 'passport') {
+                bus.$emit('send-passport-data', this.emailAddress);
+            }
+            else alert('Откройте шаблон который хотите отправить');
         }
     }
 }

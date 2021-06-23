@@ -1416,8 +1416,20 @@ export default {
 
     }),
     created() {
-        bus.$on('send-divs-data', (data) => {
-            
+        bus.$on('send-passport-data', async (data) => {
+            let response = await fetch('http://127.0.0.1:3000/api/send/Passport', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json;charset=utf-8',
+                    'Access-Control-Allow-Origin': '*'
+                },
+                body: {
+                    email: data,
+                    content: JSON.stringify(this.allDivsWithInput)
+                }
+            })
+            let result = await response.json();
+            alert(result.message);
         })
     }
 }

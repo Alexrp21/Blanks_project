@@ -65,7 +65,7 @@
       <v-app-bar app>
         <v-app-bar-nav-icon @click="drawer = !drawer" class="hidden-md-and-up"></v-app-bar-nav-icon>
         
-        <router-link to="/" class="routeHome">BLANKS</router-link>
+        <router-link to="/" class="routeHome">BLANKA</router-link>
 
         <v-spacer></v-spacer>
 
@@ -152,11 +152,6 @@ export default {
       this.drawer = false;
     }
   },
-  // computed: {
-  //   myProprs: () => {
-  //     if (this.$route.name === 'passport') { return { allDivsWithInput: this.allDivsWithInput }}
-  //   }
-  // },
   watch: {
     drawer : function (oldVal, newVal) {
       if (newVal === false) {
