@@ -1417,7 +1417,7 @@ export default {
     }),
     created() {
         bus.$on('send-passport-data', async (data) => {
-            let response = await fetch('http://127.0.0.1:3000/api/send/Passport', {
+            let response = await fetch(`${process.env.VUE_APP_BACKEND_ADDRESS}/api/send/Passport`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json;charset=utf-8',

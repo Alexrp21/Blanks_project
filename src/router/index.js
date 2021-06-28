@@ -15,7 +15,7 @@ const routes = [
     path: '/passport',
     name: 'passport',
     component: Passport
-  }
+  },
 ]
 
 const router = new VueRouter({

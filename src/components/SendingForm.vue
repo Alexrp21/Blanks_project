@@ -24,6 +24,18 @@
                 @click="sendToCurrentMail"
                 :disabled="!valid"
             >Отправить</v-btn>
+
+            <v-alert
+                :value="alert"
+                type="warning"
+                color="red"
+                prominent
+                border="left"
+                transition="scale-transition"
+                dismissible
+                style="position: absolute; z-index: 1"
+            > Откройте шаблон который хотите отправить </v-alert>
+
             <v-btn 
                 @click="emitCloseFormEvent"
                 color="#D84315"
@@ -40,6 +52,7 @@ const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/
 
 export default {
     data: () => ({
+        alert: false,
         valid: false,
         emailAddress: '',
         emailRules: [
@@ -56,8 +69,10 @@ export default {
             this.$refs.card.validate();
             if (this.$route.name === 'passport') {
                 bus.$emit('send-passport-data', this.emailAddress);
+                this.$emit('close-form');
+                alert('Сообщение отправлено!');
             }
-            else alert('Откройте шаблон который хотите отправить');
+            else this.alert = true;
         }
     }
 }

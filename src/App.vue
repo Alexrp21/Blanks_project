@@ -4,11 +4,12 @@
       <v-navigation-drawer
         v-model="drawer"
         style="z-index: 30"
+        hide-overlay
         app
       >
         <v-list dence nav>
           <v-list-item
-            @click="printPageAfterCloseDrawer"
+            @click="printPage"
           >
             <v-list-item-icon>
               <v-icon>mdi-printer</v-icon>
@@ -65,7 +66,12 @@
       <v-app-bar app>
         <v-app-bar-nav-icon @click="drawer = !drawer" class="hidden-md-and-up"></v-app-bar-nav-icon>
         
-        <router-link to="/" class="routeHome">BLANKA</router-link>
+        <router-link to="/" class="routeHome">
+          <v-img
+            src="https://i.postimg.cc/qvFqvLBY/123312-removebg-preview.png"
+            style="width: 80px; height: 60px"
+          ></v-img>
+        </router-link>
 
         <v-spacer></v-spacer>
 
@@ -142,10 +148,6 @@ export default {
   methods: {
     printPage () {
       window.print();
-    },
-    printPageAfterCloseDrawer () {
-      this.drawer = false;
-      setTimeout(this.printPage, 100);
     },
     sendMail () {
       this.sendForm = !this.sendForm;
