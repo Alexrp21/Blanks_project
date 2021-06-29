@@ -11,7 +11,7 @@
                     cols="4"
                     align="center"
                 >
-                    <router-link :to="card.path">
+                    <router-link :to="card.path" style="text-decoration: none">
                         <v-hover v-slot="{ hover }">
                             <v-card style="width: 320px">
                                 <v-img :src="card.src">
@@ -33,6 +33,22 @@
                 </v-col>
             </v-row>
         </div>
+
+        <v-footer class="indigo darken-1 white--text" style="height: 40px" absolute>
+            <v-row justify="center" align="center">
+                <a href="https://github.com/Alexrp21/Blanks_project" target="_blank" style="text-decoration: none">
+                    <v-btn
+                        class="mx-4 white--text"
+                        icon
+                    >
+                        <v-icon size="24px">mdi-github</v-icon>
+                    </v-btn>
+                </a>
+                <div>
+                    {{ new Date().getFullYear() }} г    
+                </div>
+            </v-row>
+        </v-footer>
     </div>
 </template>
 

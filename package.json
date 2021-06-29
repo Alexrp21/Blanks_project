@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "NODE_ENV=qa vue-cli-service serve",
+    "start": "npm run build && npm i -g serve && serve dist",
+    "serve": "NODE_ENV vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "gcloud app deploy -q frontend.yaml --no-promote"
   },
   "dependencies": {
     "core-js": "^3.6.5",
