@@ -1416,8 +1416,12 @@ export default {
 
     }),
     created() {
-        bus.$on('send-passport-data', async (data) => {
-            let response = await fetch(`${process.env.VUE_APP_BACKEND_ADDRESS}/api/send/Passport`, {
+        bus.$on('send-passport-data', async (email) => {
+            const data = {
+              email,
+              content: this.allDivsWithInput
+            };
+            const response = await fetch(`${process.env.VUE_APP_BACKEND_ADDRESS}/api/send/Passport`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json;charset=utf-8',
@@ -1425,10 +1429,10 @@ export default {
                 },
                 body: {
                     email: data,
-                    content: JSON.stringify(this.allDivsWithInput)
+                    content: JSON.stringify(data)
                 }
             })
-            let result = await response.json();
+            const result = await response.json();
             alert(result.message);
         })
     }
