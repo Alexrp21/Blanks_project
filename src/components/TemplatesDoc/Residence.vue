@@ -1514,6 +1514,43 @@ input {
     height: 740px;
 }
 
+#сitizenship {
+    width: 100%;
+    height: 11%;
+    display: flex;
+    flex-direction: row;
+}
+
+    #сitizenship_1 {
+        width: 50%;
+        height: 100%;
+    }
+
+    #сitizenship_2 {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+        #сitizenship_2_1 {
+            width: 40%;
+            height: 100%;
+            border-left: 1px solid black;
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #сitizenship_2_2 {
+            width: 5%;
+            height: 100%;
+        }
+
     #firstParte {
         display: flex;
         flex-direction: row;
