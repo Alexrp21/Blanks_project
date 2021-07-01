@@ -23,7 +23,7 @@
                         transition-fast-in-fast-out
                         darken-2
                         v-card--reveal
-                        text-h5
+                        text-h6
                         white--text
                       "
                       style="
@@ -31,6 +31,7 @@
                         background: DarkSlateBlue;
                         align-items: center;
                         justify-content: center;
+                        white-space: pre;
                       "
                     >
                       {{ card.title }}
@@ -66,12 +67,14 @@ export default {
   data: () => ({
     cards: [
       {
-        title: "Бланк паспорта. Форма №1",
+        title: `Бланк паспорта
+  Форма №1`,
         src: "https://i.postimg.cc/wBZSMwr1/image.png",
         path: "/passport",
       },
       {
-        title: "Бланк вида на жительство. Форма №1-иг",
+        title: `Бланк вида на жительство
+  Форма №1-иг`,
         src: "https://i.postimg.cc/wBZSMwr1/image.png",
         path: "/residence",
       },
@@ -88,12 +91,11 @@ export default {
   text-align: center;
 }
 
-h1 {
-  color: #696969;
-  padding-top: 20px;
-}
-
 .preview {
   padding: 20px 0 20px;
+}
+
+h2, h4 {
+  color: #525151;
 }
 </style>
