@@ -1,7 +1,7 @@
 <template>
-  <v-form elevation="24" class="sendForm" style="padding-top: 10px">
+  <v-form elevation="24" class="sendForm">
     <template>
-      <v-tabs v-model="tab">
+      <v-tabs v-model="tab" style="padding-top: 15px">
         <v-tab>
           <v-icon left>mdi-email-newsletter</v-icon>
           Отправить по адресу
@@ -10,7 +10,7 @@
           <v-icon left>mdi-card-account-mail</v-icon>
           Отправить в отдел по гражданству и миграции
         </v-tab>
-        <v-tabs-items v-model="tab">
+        <v-tabs-items v-model="tab" style="padding: 20px 0 20px 0">
           <v-tab-item>
             <v-form v-model="valid1" ref="myemail" validation>
               <v-card flat>
@@ -33,19 +33,19 @@
             <v-form v-model="valid2" ref="orderemail" validation>
               <v-card flat>
                 <v-autocomplete
-                  prepend-icon="mdi-at"
-                  v-model="orderEmailAddress"
-                  :rules="emailRules"
-                  :items="orderEmails"
-                  type="email"
-                  label="Email отдела"
+                  prepend-icon="mdi-office-building"
+                  v-model="currentOrderName"
+                  :rules="requiredRules"
+                  :items="orderNames"
+                  type="text"
+                  label="Введите название отделения"
                   style="
                     width: 90%;
                     margin: auto;
                     margin-top: 10px;
                     padding-bottom: 30px;
                   "
-                  placeholder="Выберите из списка или впишите Email"
+                  placeholder="Выберите отделение из списка"
                   required
                 ></v-autocomplete>
               </v-card>
@@ -91,13 +91,16 @@ export default {
     alert: false,
     valid1: false,
     valid2: false,
-    orderEmailAddress: "",
+    currentOrderName: "",
+    currentOrderEmail: "",
     emailAddress: "",
     emailRules: [
       (v) => !!v || "Поле не может быть пустым",
       (v) => emailRegex.test(v) || "Укажите корректный Email",
     ],
-    orderEmails: ["test@email.by", "test2@email.by"],
+    requiredRules: [(v) => !!v || "Поле не может быть пустым"],
+    orderNames: ["test1", "test2"],
+    orderEmails: ["test1@mail.ru", "test2@mail.ru"],
   }),
   methods: {
     emitCloseFormEvent() {
@@ -117,10 +120,10 @@ export default {
       } else if (this.tab == 1) {
         if (this.$refs.orderemail.validate()) {
           if (this.$route.name === "passport") {
-            bus.$emit("send-passport-data", this.orderEmailAddress);
+            bus.$emit("send-passport-data", this.currentOrderEmail);
             this.$emit("close-form");
           } else if (this.$route.name === "residence") {
-            bus.$emit("send-residence-data", this.orderEmailAddress);
+            bus.$emit("send-residence-data", this.currentOrderEmail);
             this.$emit("close-form");
           } else this.alert = true;
         }
@@ -134,6 +137,12 @@ export default {
       } else if (this.tab == 1) {
         return !this.valid2;
       } else return true;
+    },
+  },
+  watch: {
+    currentOrderName: function (oldVal, newVal) {
+      const index = this.orderNames.indexOf(this.currentOrderName);
+      this.currentOrderEmail = this.orderEmails[index];
     },
   },
 };
