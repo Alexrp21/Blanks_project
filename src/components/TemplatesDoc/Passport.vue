@@ -1424,13 +1424,9 @@ export default {
             const response = await fetch(`${process.env.VUE_APP_BACKEND_ADDRESS}/api/send/Passport`, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json;charset=utf-8',
-                    'Access-Control-Allow-Origin': '*'
+                    'Content-Type': 'application/json'
                 },
-                body: {
-                    email: data,
-                    content: JSON.stringify(data)
-                }
+                body: JSON.stringify(data)
             })
             const result = await response.json();
             alert(result.message);
