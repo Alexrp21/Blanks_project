@@ -1395,24 +1395,6 @@ export default {
         'payment_3': ''
       }
     }
-
-    // inputs: ['orderNum', 'idNum', 'passDate', 'departName', 'reason', 'lastNameBel', 'firstNameBel',
-    //         'middleNameBel', 'lastNameRus', 'firstNameRus', 'middleNameRus', 'lastNameLat',
-    //         'firstNameLat', 'birthDate', 'cityBel', 'districtBel', 'regionBel', 'countryBel',
-    //         'cityRus', 'districtRus', 'regionRus', 'countryRus', 'sexM', 'sexW', 'fatherLastNameBel',
-    //         'motherLastNameBel', 'spouseLastNameBel', 'fatherFirstNameBel', 'motherFirstNameBel',
-    //         'spouseFirstNameBel', 'fatherMiddleNameBel', 'motherMiddleNameBel', 'spouseMiddleNameBel',
-    //         'lastNameBeforeWedding', 'spouseBirthDate', 'regDate', 'certificate', 'regOfficeNum',
-    //         'single', 'divorced', 'widow', 'child', 'childLastName', 'childFirstName', 'childMiddleName',
-    //         'childBirthDate_day', 'childBirthDate_month', 'childBirthDate_year', 'addressBel', 'addressRus',
-    //         'abroad_1', 'abroad_2', 'date_1', 'date_2', 'date_3', 'lastName', 'docName1', 'docName2',
-    //         'docSeries_1', 'docSeries_2', 'docSeries_3', 'docNum_1', 'docNum_2', 'docNum_3',
-    //         'docDate1', 'docRegOfficeNum_1', 'docRegOfficeNum_2', 'docRegOfficeNum_3', 'docDepartName1',
-    //         'docDate2', 'docDepartName2', 'docName3', 'docDate3', 'docDepartName3', 'emplName_1',
-    //         'emplName_2', 'emplName_3', 'date_4', 'date_5', 'date_6', 'date_7', 'date_8', 'date_9', 'date_10',
-    //         'date_11', 'date_12', 'date_13', 'date_14', 'date_15', 'newPassportSeries', 'newPassportNumber',
-    //         'oldPassportSeries', 'oldPassportNumber', 'other', 'phoneNumber', 'payment']
-
   }),
   created() {
     bus.$on('send-passport-data', async (email) => {
@@ -1427,8 +1409,12 @@ export default {
         },
         body: JSON.stringify(data)
       })
-      const result = await response.json();
-      alert(result.message);
+      const result = await response.ok;
+      if (result) {
+        alert('Сообщение отправлено!');
+      } else {
+        alert('Ошибка!');
+      }
     })
   }
 }
