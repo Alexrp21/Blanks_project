@@ -1581,25 +1581,26 @@ export default {
     },
   }),
   created() {
-    bus.$on("send-residence-data", async (data) => {
-      let response = await fetch(
-        `${process.env.VUE_APP_BACKEND_ADDRESS}/api/send/Residence`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json;charset=utf-8",
-            "Access-Control-Allow-Origin": "*",
-          },
-          body: {
-            email: data,
-            content: JSON.stringify(this.allDivsWithInput),
-          },
-        }
-      );
-      let result = await response.json();
-      alert(result.message);
-    });
-  },
+    bus.$on('send-residence-data', async (email) => {
+      const data = {
+        email,
+        content: this.allDivsWithInput
+      };
+      const response = await fetch(`${process.env.VUE_APP_BACKEND_ADDRESS}/api/send/Residence`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json;charset=utf-8',
+        },
+        body: JSON.stringify(data)
+      })
+      const result = await response.ok;
+      if (result) {
+        alert('Сообщение отправлено!');
+      } else {
+        alert('Ошибка!');
+      }
+    })
+  }
 };
 </script>
 
