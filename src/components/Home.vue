@@ -75,7 +75,7 @@ export default {
       {
         title: `Бланк вида на жительство
   Форма №1-иг`,
-        src: "https://i.postimg.cc/wBZSMwr1/image.png",
+        src: "https://i.postimg.cc/RZFsShMM/image.png",
         path: "/residence",
       },
     ],

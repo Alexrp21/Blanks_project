@@ -178,8 +178,8 @@
           </div>
 
           <div id="st4">
-            <div id="st41" class="bgGrey"><span>па беларуску</span></div>
-            <div id="st42" class="bgGrey"><span>па руску</span></div>
+            <div id="st41" class="bgGrey"><span>па-беларуску</span></div>
+            <div id="st42" class="bgGrey"><span>па-руску</span></div>
 
             <div id="st43" class="bgGrey">
               <small>(запаўняецца па жаданню заяўнiка)</small>
@@ -4293,15 +4293,5 @@ input {
   border-top: 1px solid black;
   margin-top: 10%;
   text-align: center;
-}
-
-
-#lastNameBel input, #firstNameBel input,
-#middleNameBel input, #lastNameRus input,
-#firstNameRus input, #middleNameRus input,
-#lastNameLat input, #firstNameLat input,
-#birthDate_1 input, #birthDate_2 input,
-#birthDate_3 input {
-  height: 72%;
 }
 </style>
