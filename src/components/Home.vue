@@ -1,20 +1,15 @@
 <template>
   <div class="body">
-    <h2 style="padding-top: 20px">Blanka - приложение</h2>
-    <h2 style="padding-bottom: 20px">
-      для бесплатного заполнения бланков документов онлайн
-    </h2>
-    <h4>
-      Выберите нужный шаблон, заполните и распечатайте, либо отправьте на
-      электронную почту
-    </h4>
+    <h2 style="padding-top: 20px">{{ $t("homeTitle_1") }}</h2>
+    <h2 style="padding-bottom: 20px">{{ $t("homeTitle_2") }}</h2>
+    <h4>{{ $t("homeTitle_3") }}</h4>
     <div class="preview">
       <v-row justify="center">
         <v-col v-for="(card, id) in cards" :key="id" cols="4" align="center">
           <router-link :to="card.path" style="text-decoration: none">
             <v-hover v-slot="{ hover }">
-              <v-card style="width: 320px">
-                <v-img :src="card.src">
+              <v-card style="width: 300px">
+                <v-img :src="card.src" :alt="card.alt">
                   <v-expand-transition>
                     <div
                       v-if="hover"
@@ -31,13 +26,13 @@
                         background: DarkSlateBlue;
                         align-items: center;
                         justify-content: center;
-                        white-space: pre;
                       "
                     >
-                      {{ card.title }}
+                      {{ $t("clickForOpenTempl") }}
                     </div>
                   </v-expand-transition>
                 </v-img>
+                <div class="cardLabel">{{ card.title }}</div>
               </v-card>
             </v-hover>
           </router-link>
@@ -56,7 +51,7 @@
             <v-icon size="24px">mdi-github</v-icon>
           </v-btn>
         </a>
-        <div>{{ new Date().getFullYear() }} г</div>
+        <div>{{ new Date().getFullYear() }}</div>
       </v-row>
     </v-footer>
   </div>
@@ -64,22 +59,24 @@
 
 <script>
 export default {
-  data: () => ({
-    cards: [
+  computed: {
+    cards() {
+      return [
       {
-        title: `Бланк паспорта
-  Форма №1`,
+        title: this.$t("passportBlankName"),
         src: "https://i.postimg.cc/wBZSMwr1/image.png",
+        alt: 'Passport blank image',
         path: "/passport",
       },
       {
-        title: `Бланк вида на жительство
-  Форма №1-иг`,
+        title: this.$t("residenceBlankName"),
+        alt: 'Residence blank image',
         src: "https://i.postimg.cc/RZFsShMM/image.png",
         path: "/residence",
       },
-    ],
-  }),
+    ]
+    } 
+  }
 };
 </script>
 
@@ -95,7 +92,14 @@ export default {
   padding: 20px 0 20px;
 }
 
-h2, h4 {
+h2,
+h4 {
   color: #525151;
+}
+
+.cardLabel {
+  width: 100%;
+  height: 50px;
+  padding: 0 5px;
 }
 </style>

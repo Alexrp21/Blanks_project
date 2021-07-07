@@ -1,1427 +1,1827 @@
 <template>
   <body>
-  <div id="document">
-    <div id="onePage">
-      <div id="firstParte">
-        <div id="photo">
-          <p>Месца</p>
-          <p>для</p>
-          <p>фотакарткi</p>
-        </div>
-
-        <div id="st">
-          <div id="st1">
-            <div id="st11">
-              <div id="orderNum">
-                <div id="orderNum_title"><span><strong>Заява</strong></span></div>
-                <div id="orderNum_1">
-                  <input class="textCenter" v-model="allDivsWithInput.orderNum.orderNum_1">
-                </div>
-                <div id="orderNum_2">
-                  <input class="textCenter" v-model="allDivsWithInput.orderNum.orderNum_2">
-                </div>
-                <div id="orderNum_3">
-                  <input class="textCenter" v-model="allDivsWithInput.orderNum.orderNum_3">
-                </div>
-                <div id="orderNum_4">
-                  <input class="textCenter" v-model="allDivsWithInput.orderNum.orderNum_4">
-                </div>
-              </div>
-
-              <div id="st112">
-                рэгістрацыйны нумар
-              </div>
+    <div id="document">
+      <div id="onePage">
+        <div id="firstParte">
+          <div id="photo">
+            <p>Месца</p>
+            <p>для</p>
+            <p>фотакарткi</p>
+            <div @mouseover="tooltipSpan($t(''))" class="hiddenForPrint">
+              <Tooltip />
             </div>
+          </div>
 
-            <div id="st12">
-              <div id="idNum">
-                <div id="idNum_title" class="bgGrey">Iдэнтыфiкацыйны №</div>
-                <div id="idNum_1">
-                  <input
+          <div id="st">
+            <div id="st1">
+              <div id="st11">
+                <div id="orderNum">
+                  <div id="orderNum_title">
+                    <span><strong>Заява</strong></span>
+                  </div>
+                  <div id="orderNum_1">
+                    <input
+                      class="textCenter"
+                      v-model="allDivsWithInput.orderNum.orderNum_1"
+                    />
+                  </div>
+                  <div id="orderNum_2">
+                    <input
+                      class="textCenter"
+                      v-model="allDivsWithInput.orderNum.orderNum_2"
+                    />
+                  </div>
+                  <div id="orderNum_3">
+                    <input
+                      class="textCenter"
+                      v-model="allDivsWithInput.orderNum.orderNum_3"
+                    />
+                  </div>
+                  <div id="orderNum_4">
+                    <input
+                      class="textCenter"
+                      v-model="allDivsWithInput.orderNum.orderNum_4"
+                    />
+                  </div>
+                </div>
+
+                <div id="st112">рэгістрацыйны нумар</div>
+              </div>
+
+              <div id="st12">
+                <div id="idNum">
+                  <div id="idNum_title" class="bgGrey">Iдэнтыфiкацыйны №</div>
+                  <div id="idNum_1">
+                    <input
                       class="textCenter"
                       maxlength="1"
                       v-model="allDivsWithInput.idNum.idNum_1"
-                  >
-                </div>
-                <div id="idNum_2">
-                  <input
+                    />
+                  </div>
+                  <div id="idNum_2">
+                    <input
                       class="textCenter"
                       maxlength="1"
                       v-model="allDivsWithInput.idNum.idNum_2"
-                  >
-                </div>
-                <div id="idNum_3">
-                  <input
+                    />
+                  </div>
+                  <div id="idNum_3">
+                    <input
                       class="textCenter"
                       maxlength="1"
                       v-model="allDivsWithInput.idNum.idNum_3"
-                  >
-                </div>
-                <div id="idNum_4">
-                  <input
+                    />
+                  </div>
+                  <div id="idNum_4">
+                    <input
                       class="textCenter"
                       maxlength="1"
                       v-model="allDivsWithInput.idNum.idNum_4"
-                  >
-                </div>
-                <div id="idNum_5">
-                  <input
+                    />
+                  </div>
+                  <div id="idNum_5">
+                    <input
                       class="textCenter"
                       maxlength="1"
                       v-model="allDivsWithInput.idNum.idNum_5"
-                  >
-                </div>
-                <div id="idNum_6">
-                  <input
+                    />
+                  </div>
+                  <div id="idNum_6">
+                    <input
                       class="textCenter"
                       maxlength="1"
                       v-model="allDivsWithInput.idNum.idNum_6"
-                  >
-                </div>
-                <div id="idNum_7">
-                  <input
+                    />
+                  </div>
+                  <div id="idNum_7">
+                    <input
                       class="textCenter"
                       maxlength="1"
                       v-model="allDivsWithInput.idNum.idNum_7"
-                  >
-                </div>
-                <div id="idNum_8">
-                  <input
+                    />
+                  </div>
+                  <div id="idNum_8">
+                    <input
                       class="textCenter"
                       maxlength="1"
                       v-model="allDivsWithInput.idNum.idNum_8"
-                  >
-                </div>
-                <div id="idNum_9">
-                  <input
+                    />
+                  </div>
+                  <div id="idNum_9">
+                    <input
                       class="textCenter"
                       maxlength="1"
                       v-model="allDivsWithInput.idNum.idNum_9"
-                  >
-                </div>
-                <div id="idNum_10">
-                  <input
+                    />
+                  </div>
+                  <div id="idNum_10">
+                    <input
                       class="textCenter"
                       maxlength="1"
                       v-model="allDivsWithInput.idNum.idNum_10"
-                  >
-                </div>
-                <div id="idNum_11">
-                  <input
+                    />
+                  </div>
+                  <div id="idNum_11">
+                    <input
                       class="textCenter"
                       maxlength="1"
                       v-model="allDivsWithInput.idNum.idNum_11"
-                  >
-                </div>
-                <div id="idNum_12">
-                  <input
+                    />
+                  </div>
+                  <div id="idNum_12">
+                    <input
                       class="textCenter"
                       maxlength="1"
                       v-model="allDivsWithInput.idNum.idNum_12"
-                  >
-                </div>
-                <div id="idNum_13">
-                  <input
+                    />
+                  </div>
+                  <div id="idNum_13">
+                    <input
                       class="textCenter"
                       maxlength="1"
                       v-model="allDivsWithInput.idNum.idNum_13"
-                  >
-                </div>
-                <div id="idNum_14">
-                  <input
+                    />
+                  </div>
+                  <div id="idNum_14">
+                    <input
                       class="textCenter"
                       maxlength="1"
                       v-model="allDivsWithInput.idNum.idNum_14"
-                  >
+                    />
+                  </div>
                 </div>
-              </div>
-              <div id="passDate">
-                <div id="passDate_title" class="bgGrey">Пашпарт сапраўдны</div>
-                <div id="passDate_1">
-                  <input class="textCenter" v-model="allDivsWithInput.passDate.passDate_1">
-                </div>
-                <div id="passDate_2">
-                  <input class="textCenter" v-model="allDivsWithInput.passDate.passDate_2">
-                </div>
-                <div id="passDate_3">
-                  <input class="textCenter" v-model="allDivsWithInput.passDate.passDate_3">
+                <div id="passDate">
+                  <div id="passDate_title" class="bgGrey">
+                    Пашпарт сапраўдны
+                  </div>
+                  <div id="passDate_1">
+                    <input
+                      class="textCenter"
+                      v-model="allDivsWithInput.passDate.passDate_1"
+                    />
+                  </div>
+                  <div id="passDate_2">
+                    <input
+                      class="textCenter"
+                      v-model="allDivsWithInput.passDate.passDate_2"
+                    />
+                  </div>
+                  <div id="passDate_3">
+                    <input
+                      class="textCenter"
+                      v-model="allDivsWithInput.passDate.passDate_3"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div id="st2">
-            <div id="st21" class="bgGrey">
-              <span><strong>У</strong></span><small>(назва органа)</small></div>
+            <div id="st2">
+              <div id="st21" class="bgGrey">
+                <span><strong>У</strong></span
+                ><small>(назва органа)</small>
+              </div>
 
-            <div id="departName">
-              <input
+              <div id="departName">
+                <input
                   maxlength="50"
                   placeholder="ЛЕНIНСКI РАУС г.ГРОДНА"
                   v-model="allDivsWithInput.departName"
-              >
-            </div>
-          </div>
-
-          <div id="st3">
-            <div id="st31" class="bgGrey">
-              <span><strong>Прашу выдаць (абмяняць) пашпарт у сувязi</strong></span>
-              <small>(адзначыць прычыну)</small>
+                />
+              </div>
             </div>
 
-            <div id="reason">
-              <input
+            <div id="st3">
+              <div id="st31" class="bgGrey">
+                <span
+                  ><strong
+                    >Прашу выдаць (абмяняць) пашпарт у сувязi</strong
+                  ></span
+                >
+                <small>(адзначыць прычыну)</small>
+              </div>
+
+              <div id="reason">
+                <input
                   maxlength="60"
                   placeholder="ЗМЕНА ПРОЗВIШЧА, УЛАСНАГА IМЯ, IМЯ ПА БАЦЬКУ"
                   v-model="allDivsWithInput.reason"
-              ></div>
-          </div>
-
-          <div id="st4">
-            <div id="st41" class="bgGrey"><span>па-беларуску</span></div>
-            <div id="st42" class="bgGrey"><span>па-руску</span></div>
-
-            <div id="st43" class="bgGrey">
-              <small>(запаўняецца па жаданню заяўнiка)</small>
-              <small>лацiнская транскрыпцыя</small>
-            </div>
-          </div>
-
-          <div id="st5">
-            <div id="st51">
-              <div id="st511" class="bgGrey"><span><strong>1.Прозвiшча</strong></span></div>
-              <div id="st512" class="bgGrey"><span><strong>2.Iмя</strong></span></div>
-              <div id="st513" class="bgGrey"><span><strong>3.Iмя па бацьку</strong></span></div>
-            </div>
-
-            <div id="st52">
-              <div id="lastNameBel">
-                <input placeholder="СЯРГЕЕВА" v-model="allDivsWithInput.lastNameBel">
-              </div>
-              <div id="firstNameBel">
-                <input placeholder="IРЫНА" v-model="allDivsWithInput.firstNameBel">
-              </div>
-              <div id="middleNameBel">
-                <input placeholder="IВАНАЎНА" v-model="allDivsWithInput.middleNameBel">
+                />
               </div>
             </div>
 
-            <div id=st53>
-              <div id=lastNameRus>
-                <input placeholder="СЕРГЕЕВА" v-model="allDivsWithInput.lastNameRus">
-              </div>
-              <div id=firstNameRus>
-                <input placeholder="ИРИНА" v-model="allDivsWithInput.firstNameRus">
-              </div>
-              <div id=middleNameRus>
-                <input placeholder="ИВАНОВНА" v-model="allDivsWithInput.middleNameRus">
+            <div id="st4">
+              <div id="st41" class="bgGrey"><span>па-беларуску</span></div>
+              <div id="st42" class="bgGrey"><span>па-руску</span></div>
+
+              <div id="st43" class="bgGrey">
+                <small>(запаўняецца па жаданню заяўнiка)</small>
+                <small>лацiнская транскрыпцыя</small>
               </div>
             </div>
 
-            <div id="st54">
-              <div id="lastNameLat"><input v-model="allDivsWithInput.lastNameLat"></div>
-              <div id="firstNameLat"><input v-model="allDivsWithInput.firstNameLat"></div>
-              <div id="birthDate">
-                <div id="st5431" class="bgGrey">
-                  <small><strong>4.Дата</strong></small>
-                  <small><strong>нараджэння</strong></small>
+            <div id="st5">
+              <div id="st51">
+                <div id="st511" class="bgGrey">
+                  <span><strong>1.Прозвiшча</strong></span>
                 </div>
-                <div id="birthDate_1">
+                <div id="st512" class="bgGrey">
+                  <span><strong>2.Iмя</strong></span>
+                </div>
+                <div id="st513" class="bgGrey">
+                  <span><strong>3.Iмя па бацьку</strong></span>
+                </div>
+              </div>
+
+              <div id="st52">
+                <div id="lastNameBel">
                   <input
+                    placeholder="СЯРГЕЕВА"
+                    v-model="allDivsWithInput.lastNameBel"
+                  />
+                </div>
+                <div id="firstNameBel">
+                  <input
+                    placeholder="IРЫНА"
+                    v-model="allDivsWithInput.firstNameBel"
+                  />
+                </div>
+                <div id="middleNameBel">
+                  <input
+                    placeholder="IВАНАЎНА"
+                    v-model="allDivsWithInput.middleNameBel"
+                  />
+                </div>
+              </div>
+
+              <div id="st53">
+                <div id="lastNameRus">
+                  <input
+                    placeholder="СЕРГЕЕВА"
+                    v-model="allDivsWithInput.lastNameRus"
+                  />
+                </div>
+                <div id="firstNameRus">
+                  <input
+                    placeholder="ИРИНА"
+                    v-model="allDivsWithInput.firstNameRus"
+                  />
+                </div>
+                <div id="middleNameRus">
+                  <input
+                    placeholder="ИВАНОВНА"
+                    v-model="allDivsWithInput.middleNameRus"
+                  />
+                </div>
+              </div>
+
+              <div id="st54">
+                <div id="lastNameLat">
+                  <input v-model="allDivsWithInput.lastNameLat" />
+                </div>
+                <div id="firstNameLat">
+                  <input v-model="allDivsWithInput.firstNameLat" />
+                </div>
+                <div id="birthDate">
+                  <div id="st5431" class="bgGrey">
+                    <small><strong>4.Дата</strong></small>
+                    <small><strong>нараджэння</strong></small>
+                  </div>
+                  <div id="birthDate_1">
+                    <input
                       maxlength="2"
                       class="textCenter"
                       placeholder="25"
-                      v-model="allDivsWithInput.birthDate.birthDate_1">
-                </div>
-                <div id="birthDate_2">
-                  <input
+                      v-model="allDivsWithInput.birthDate.birthDate_1"
+                    />
+                  </div>
+                  <div id="birthDate_2">
+                    <input
                       maxlength="2"
                       class="textCenter"
                       placeholder="08"
-                      v-model="allDivsWithInput.birthDate.birthDate_2">
-                </div>
-                <div id="birthDate_3">
-                  <input
+                      v-model="allDivsWithInput.birthDate.birthDate_2"
+                    />
+                  </div>
+                  <div id="birthDate_3">
+                    <input
                       maxlength="4"
                       class="textCenter"
                       placeholder="1991"
-                      v-model="allDivsWithInput.birthDate.birthDate_3">
+                      v-model="allDivsWithInput.birthDate.birthDate_3"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="st6" class="bgGrey">
+              <span><strong>5.Месца нараджэння</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div id="second">
+          <div id="sp1">
+            <div id="sp11">
+              <div id="sp111" class="bgGrey">
+                <span>вёска, пасёлак, горад</span>
+              </div>
+              <div id="sp112" class="bgGrey"><span>раён</span></div>
+              <div id="sp113" class="bgGrey"><span>вобласць (край)</span></div>
+              <div id="sp114" class="bgGrey"><span>краiна</span></div>
+            </div>
+
+            <div id="sp12">
+              <div id="cityBel">
+                <input
+                  placeholder="г. ГРОДНА"
+                  v-model="allDivsWithInput.cityBel"
+                />
+              </div>
+              <div id="districtBel">
+                <input v-model="allDivsWithInput.districtBel" />
+              </div>
+              <div id="regionBel">
+                <input v-model="allDivsWithInput.regionBel" />
+              </div>
+              <div id="countryBel">
+                <input
+                  placeholder="РЭСПУБЛIКА БЕЛАРУСЬ"
+                  v-model="allDivsWithInput.countryBel"
+                />
+              </div>
+            </div>
+
+            <div id="sp13">
+              <div id="cityRus">
+                <input
+                  placeholder="г. ГРОДНО"
+                  v-model="allDivsWithInput.cityRus"
+                />
+              </div>
+              <div id="districtRus">
+                <input v-model="allDivsWithInput.districtRus" />
+              </div>
+              <div id="regionRus">
+                <input v-model="allDivsWithInput.regionRus" />
+              </div>
+              <div id="countryRus">
+                <input
+                  placeholder="РЕСПУБЛИКА БЕЛАРУСЬ"
+                  v-model="allDivsWithInput.countryRus"
+                />
+              </div>
+            </div>
+
+            <div id="sp14">
+              <div id="sp141">
+                <div id="sp1411" class="bgGrey">
+                  <span><strong>Пол</strong></span>
+                </div>
+                <div id="sp1412" class="bgGrey">
+                  <span>М</span><span>Ж</span>
+                </div>
+              </div>
+
+              <div id="sp142">
+                <div id="sexM">
+                  <input
+                    type="checkbox"
+                    id="check1"
+                    v-model="allDivsWithInput.sexM"
+                    @click="clearSexW"
+                  /><label for="check1"></label>
+                </div>
+                <div id="sexW">
+                  <input
+                    type="checkbox"
+                    id="check2"
+                    v-model="allDivsWithInput.sexW"
+                    @click="clearSexM"
+                  /><label for="check2"></label>
                 </div>
               </div>
             </div>
           </div>
 
-          <div id="st6" class="bgGrey"><span><strong>5.Месца нараджэння</strong></span></div>
-        </div>
-      </div>
-
-      <div id="second">
-        <div id="sp1">
-          <div id="sp11">
-            <div id="sp111" class="bgGrey"><span>вёска, пасёлак, горад</span></div>
-            <div id="sp112" class="bgGrey"><span>раён</span></div>
-            <div id="sp113" class="bgGrey"><span>вобласць (край)</span></div>
-            <div id="sp114" class="bgGrey"><span>краiна</span></div>
-          </div>
-
-          <div id="sp12">
-            <div id="cityBel">
-              <input placeholder="г. ГРОДНА" v-model="allDivsWithInput.cityBel">
+          <div id="sp2">
+            <div id="sp21" class="bgGrey">
+              <span><strong>6.Бацькi</strong></span>
             </div>
-            <div id="districtBel">
-              <input v-model="allDivsWithInput.districtBel">
+            <div id="sp22" class="bgGrey">
+              <span><strong>Прозвiшча</strong></span>
             </div>
-            <div id="regionBel">
-              <input v-model="allDivsWithInput.regionBel">
+            <div id="sp23" class="bgGrey">
+              <span><strong>Iмя</strong></span>
             </div>
-            <div id="countryBel">
-              <input placeholder="РЭСПУБЛIКА БЕЛАРУСЬ" v-model="allDivsWithInput.countryBel">
+            <div id="sp24" class="bgGrey">
+              <span><strong>Iмя па бацьку</strong></span>
             </div>
           </div>
 
-          <div id="sp13">
-            <div id="cityRus">
-              <input placeholder="г. ГРОДНО" v-model="allDivsWithInput.cityRus">
-            </div>
-            <div id="districtRus">
-              <input v-model="allDivsWithInput.districtRus">
-            </div>
-            <div id="regionRus">
-              <input v-model="allDivsWithInput.regionRus">
-            </div>
-            <div id="countryRus">
-              <input placeholder="РЕСПУБЛИКА БЕЛАРУСЬ" v-model="allDivsWithInput.countryRus">
-            </div>
-          </div>
-
-          <div id="sp14">
-            <div id="sp141">
-              <div id="sp1411" class="bgGrey">
-                <span><strong>Пол</strong></span>
+          <div id="sp3">
+            <div id="sp31">
+              <div id="sp311" class="bgGrey">
+                <span><strong>бацька</strong></span>
               </div>
-              <div id="sp1412" class="bgGrey">
-                <span>М</span><span>Ж</span>
+              <div id="sp312" class="bgGrey">
+                <span><strong>мацi</strong></span>
+              </div>
+              <div id="sp313" class="bgGrey">
+                <span><strong>7.Муж, жонка</strong></span>
               </div>
             </div>
 
-            <div id="sp142">
-              <div id="sexM">
+            <div id="sp32">
+              <div id="fatherLastNameBel">
                 <input
-                    type="checkbox"
-                    id="check1"
-                    v-model="allDivsWithInput.sexM"
-                ><label for="check1"></label>
+                  placeholder="ПЯТРОЎ"
+                  v-model="allDivsWithInput.fatherLastNameBel"
+                />
               </div>
-              <div id="sexW">
+              <div id="motherLastNameBel">
                 <input
-                    type="checkbox"
-                    id="check2"
-                    v-model="allDivsWithInput.sexW"
-                ><label for="check2"></label>
+                  placeholder="ПЯТРОВА"
+                  v-model="allDivsWithInput.motherLastNameBel"
+                />
+              </div>
+              <div id="spouseLastNameBel">
+                <input
+                  placeholder="СЯРГЕЕЎ"
+                  v-model="allDivsWithInput.spouseLastNameBel"
+                />
+              </div>
+            </div>
+
+            <div id="sp33">
+              <div id="fatherFirstNameBel">
+                <input
+                  placeholder="IВАН"
+                  v-model="allDivsWithInput.fatherFirstNameBel"
+                />
+              </div>
+              <div id="motherFirstNameBel">
+                <input
+                  placeholder="АЛА"
+                  v-model="allDivsWithInput.motherFirstNameBel"
+                />
+              </div>
+              <div id="spouseFirstNameBel">
+                <input
+                  placeholder="МIКАЛАЙ"
+                  v-model="allDivsWithInput.spouseFirstNameBel"
+                />
+              </div>
+            </div>
+            <div id="sp34">
+              <div id="fatherMiddleNameBel">
+                <input
+                  placeholder="АНТОНАВIЧ"
+                  v-model="allDivsWithInput.fatherMiddleNameBel"
+                />
+              </div>
+              <div id="motherMiddleNameBel">
+                <input
+                  placeholder="МIХАЙЛАЎНА"
+                  v-model="allDivsWithInput.motherMiddleNameBel"
+                />
+              </div>
+              <div id="spouseMiddleNameBel">
+                <input
+                  placeholder="УЛАДЗIМIРАВIЧ"
+                  v-model="allDivsWithInput.spouseMiddleNameBel"
+                />
               </div>
             </div>
           </div>
-        </div>
 
-        <div id="sp2">
-          <div id="sp21" class="bgGrey"><span><strong>6.Бацькi</strong></span></div>
-          <div id="sp22" class="bgGrey"><span><strong>Прозвiшча</strong></span></div>
-          <div id="sp23" class="bgGrey"><span><strong>Iмя</strong></span></div>
-          <div id="sp24" class="bgGrey"><span><strong>Iмя па бацьку</strong></span></div>
-        </div>
+          <div id="sp4">
+            <div id="sp41" class="bgGrey"><span>прозвiшча да шлюбу</span></div>
 
-        <div id="sp3">
-          <div id="sp31">
-            <div id="sp311" class="bgGrey"><span><strong>бацька</strong></span></div>
-            <div id="sp312" class="bgGrey"><span><strong>мацi</strong></span></div>
-            <div id="sp313" class="bgGrey"><span><strong>7.Муж, жонка</strong></span></div>
-          </div>
+            <div id="lastNameBeforeWedding">
+              <input v-model="allDivsWithInput.lastNameBeforeWedding" />
+            </div>
 
-          <div id="sp32">
-            <div id="fatherLastNameBel">
-              <input placeholder="ПЯТРОЎ" v-model="allDivsWithInput.fatherLastNameBel">
-            </div>
-            <div id="motherLastNameBel">
-              <input placeholder="ПЯТРОВА" v-model="allDivsWithInput.motherLastNameBel">
-            </div>
-            <div id="spouseLastNameBel">
-              <input placeholder="СЯРГЕЕЎ" v-model="allDivsWithInput.spouseLastNameBel">
-            </div>
-          </div>
-
-          <div id="sp33">
-            <div id="fatherFirstNameBel">
-              <input placeholder="IВАН" v-model="allDivsWithInput.fatherFirstNameBel">
-            </div>
-            <div id="motherFirstNameBel">
-              <input placeholder="АЛА" v-model="allDivsWithInput.motherFirstNameBel">
-            </div>
-            <div id="spouseFirstNameBel">
-              <input placeholder="МIКАЛАЙ" v-model="allDivsWithInput.spouseFirstNameBel">
-            </div>
-          </div>
-          <div id="sp34">
-            <div id="fatherMiddleNameBel">
-              <input placeholder="АНТОНАВIЧ" v-model="allDivsWithInput.fatherMiddleNameBel">
-            </div>
-            <div id="motherMiddleNameBel">
-              <input placeholder="МIХАЙЛАЎНА" v-model="allDivsWithInput.motherMiddleNameBel">
-            </div>
-            <div id="spouseMiddleNameBel">
-              <input placeholder="УЛАДЗIМIРАВIЧ" v-model="allDivsWithInput.spouseMiddleNameBel">
-            </div>
-          </div>
-        </div>
-
-        <div id="sp4">
-          <div id="sp41" class="bgGrey"><span>прозвiшча да шлюбу</span></div>
-
-          <div id="lastNameBeforeWedding">
-            <input v-model="allDivsWithInput.lastNameBeforeWedding">
-          </div>
-
-          <div id="spouseBirthDate">
-            <div id="sp431" class="bgGrey">
-              <span><strong>Дата нараджэння</strong></span>
-            </div>
-            <div id="birthDate_4">
-              <input
+            <div id="spouseBirthDate">
+              <div id="sp431" class="bgGrey">
+                <span><strong>Дата нараджэння</strong></span>
+              </div>
+              <div id="birthDate_4">
+                <input
                   maxlength="2"
                   class="textCenter"
                   placeholder="09"
                   v-model="allDivsWithInput.spouseBirthDate.birthDate_4"
-              >
-            </div>
-            <div id="birthDate_5">
-              <input
+                />
+              </div>
+              <div id="birthDate_5">
+                <input
                   maxlength="2"
                   class="textCenter"
                   placeholder="05"
                   v-model="allDivsWithInput.spouseBirthDate.birthDate_5"
-              >
-            </div>
-            <div id="birthDate_6">
-              <input
+                />
+              </div>
+              <div id="birthDate_6">
+                <input
                   maxlength="4"
                   class="textCenter"
                   placeholder="1980"
                   v-model="allDivsWithInput.spouseBirthDate.birthDate_6"
-              >
+                />
+              </div>
             </div>
-          </div>
 
-          <div id="regDate">
-            <div id="sp441" class="bgGrey">
-              <span><strong>Дата рэгістрацыі</strong></span>
-            </div>
-            <div id="regDate_1">
-              <input
+            <div id="regDate">
+              <div id="sp441" class="bgGrey">
+                <span><strong>Дата рэгістрацыі</strong></span>
+              </div>
+              <div id="regDate_1">
+                <input
                   maxlength="2"
                   class="textCenter"
                   placeholder="02"
                   v-model="allDivsWithInput.regDate.regDate_1"
-              >
-            </div>
-            <div id="regDate_2">
-              <input
+                />
+              </div>
+              <div id="regDate_2">
+                <input
                   maxlength="2"
                   class="textCenter"
                   placeholder="11"
                   v-model="allDivsWithInput.regDate.regDate_2"
-              >
-            </div>
-            <div id="regDate_3">
-              <input
+                />
+              </div>
+              <div id="regDate_3">
+                <input
                   maxlength="4"
                   class="textCenter"
                   placeholder="2015"
                   v-model="allDivsWithInput.regDate.regDate_3"
-              >
+                />
+              </div>
             </div>
           </div>
-        </div>
 
-        <div id="sp5">
-          <div id="sp51" class="bgGrey">
-            <span>пасведчанне</span>
-            <span>выдадзена</span>
-          </div>
-          <div id="certificate">
-            <input
+          <div id="sp5">
+            <div id="sp51" class="bgGrey">
+              <span>пасведчанне</span>
+              <span>выдадзена</span>
+            </div>
+            <div id="certificate">
+              <input
                 placeholder="А/ЗАГС КАСТРЫЧНIЦКАГА Р-НА г.ГРОДНА"
                 v-model="allDivsWithInput.certificate"
-            >
-          </div>
-          <div id="sp53" class="bgGrey"><span>а/з</span></div>
-          <div id="regOfficeNum">
-            <input
+              />
+            </div>
+            <div id="sp53" class="bgGrey"><span>а/з</span></div>
+            <div id="regOfficeNum">
+              <input
                 class="textCenter"
                 placeholder="3251"
                 v-model="allDivsWithInput.regOfficeNum"
-            >
+              />
+            </div>
           </div>
-        </div>
 
-        <div id="sp6">
-          <div id="sp61" class="bgGrey"><span><strong>Халасты/Незамужняя</strong></span></div>
-          <div id="single">
-            <input
+          <div id="sp6">
+            <div id="sp61" class="bgGrey">
+              <span><strong>Халасты/Незамужняя</strong></span>
+            </div>
+            <div id="single">
+              <input
                 type="checkbox"
                 id="check3"
                 v-model="allDivsWithInput.single"
-            ><label for="check3"></label>
-          </div>
-          <div id="sp63" class="bgGrey"><span><strong>Разведзены(ая)</strong></span></div>
-          <div id="divorced">
-            <input
+                @click="clearDivorcedAndWidow"
+              /><label for="check3"></label>
+            </div>
+            <div id="sp63" class="bgGrey">
+              <span><strong>Разведзены(ая)</strong></span>
+            </div>
+            <div id="divorced">
+              <input
                 type="checkbox"
                 id="check4"
                 v-model="allDivsWithInput.divorced"
-            ><label for="check4"></label>
-          </div>
-          <div id="sp65" class="bgGrey"><span><strong>Удавец(ва)</strong></span></div>
-          <div id="widow">
-            <input
+                @click="clearSingleAndWidow"
+              /><label for="check4"></label>
+            </div>
+            <div id="sp65" class="bgGrey">
+              <span><strong>Удавец(ва)</strong></span>
+            </div>
+            <div id="widow">
+              <input
                 type="checkbox"
                 id="check5"
                 v-model="allDivsWithInput.widow"
-            ><label for="check5"></label>
-          </div>
-        </div>
-
-        <div id="sp7">
-          <div id="sp71" class="bgGrey"><span><strong>8.Дзеці</strong> (да 18 гадоу)</span></div>
-          <div id="sp72" class="bgGrey"><span><strong>Прозвiшча</strong></span></div>
-          <div id="sp73" class="bgGrey"><span><strong>Iмя</strong></span></div>
-          <div id="sp74" class="bgGrey"><span><strong>Iмя па бацьку</strong></span></div>
-          <div id="sp75" class="bgGrey"><span><strong>Дата нараджэння</strong></span></div>
-        </div>
-
-        <div id="sp8">
-          <div id="child">
-            <div id="child_1">
-              <input placeholder="НЯМА" v-model="allDivsWithInput.child.child_1">
-            </div>
-            <div id="child_2">
-              <input v-model="allDivsWithInput.child.child_2">
-            </div>
-            <div id="child_3">
-              <input v-model="allDivsWithInput.child.child_3">
+                @click="clearSingleAndDivorced"
+              /><label for="check5"></label>
             </div>
           </div>
 
-          <div id="childLastName">
-            <div id="childLastName_1">
-              <input v-model="allDivsWithInput.childLastName.childLastName_1">
+          <div id="sp7">
+            <div id="sp71" class="bgGrey">
+              <span><strong>8.Дзеці</strong> (да 18 гадоу)</span>
             </div>
-            <div id="childLastName_2">
-              <input v-model="allDivsWithInput.childLastName.childLastName_2">
+            <div id="sp72" class="bgGrey">
+              <span><strong>Прозвiшча</strong></span>
             </div>
-            <div id="childLastName_3">
-              <input v-model="allDivsWithInput.childLastName.childLastName_3">
+            <div id="sp73" class="bgGrey">
+              <span><strong>Iмя</strong></span>
             </div>
-          </div>
-
-          <div id="childFirstName">
-            <div id="childFirstName_1">
-              <input v-model="allDivsWithInput.childFirstName.childFirstName_1">
+            <div id="sp74" class="bgGrey">
+              <span><strong>Iмя па бацьку</strong></span>
             </div>
-            <div id="childFirstName_2">
-              <input v-model="allDivsWithInput.childFirstName.childFirstName_2">
-            </div>
-            <div id="childFirstName_3">
-              <input v-model="allDivsWithInput.childFirstName.childFirstName_3">
+            <div id="sp75" class="bgGrey">
+              <span><strong>Дата нараджэння</strong></span>
             </div>
           </div>
 
-          <div id="childMiddleName">
-            <div id="childMiddleName_1">
-              <input v-model="allDivsWithInput.childMiddleName.childMiddleName_1">
+          <div id="sp8">
+            <div id="child">
+              <div id="child_1">
+                <input
+                  placeholder="НЯМА"
+                  v-model="allDivsWithInput.child.child_1"
+                />
+              </div>
+              <div id="child_2">
+                <input v-model="allDivsWithInput.child.child_2" />
+              </div>
+              <div id="child_3">
+                <input v-model="allDivsWithInput.child.child_3" />
+              </div>
             </div>
-            <div id="childMiddleName_2">
-              <input v-model="allDivsWithInput.childMiddleName.childMiddleName_2">
-            </div>
-            <div id="childMiddleName_3">
-              <input v-model="allDivsWithInput.childMiddleName.childMiddleName_3">
-            </div>
-          </div>
 
-          <div id="childBirthDate_day">
-            <div id="childBirthDate_day_1">
-              <input
+            <div id="childLastName">
+              <div id="childLastName_1">
+                <input
+                  v-model="allDivsWithInput.childLastName.childLastName_1"
+                />
+              </div>
+              <div id="childLastName_2">
+                <input
+                  v-model="allDivsWithInput.childLastName.childLastName_2"
+                />
+              </div>
+              <div id="childLastName_3">
+                <input
+                  v-model="allDivsWithInput.childLastName.childLastName_3"
+                />
+              </div>
+            </div>
+
+            <div id="childFirstName">
+              <div id="childFirstName_1">
+                <input
+                  v-model="allDivsWithInput.childFirstName.childFirstName_1"
+                />
+              </div>
+              <div id="childFirstName_2">
+                <input
+                  v-model="allDivsWithInput.childFirstName.childFirstName_2"
+                />
+              </div>
+              <div id="childFirstName_3">
+                <input
+                  v-model="allDivsWithInput.childFirstName.childFirstName_3"
+                />
+              </div>
+            </div>
+
+            <div id="childMiddleName">
+              <div id="childMiddleName_1">
+                <input
+                  v-model="allDivsWithInput.childMiddleName.childMiddleName_1"
+                />
+              </div>
+              <div id="childMiddleName_2">
+                <input
+                  v-model="allDivsWithInput.childMiddleName.childMiddleName_2"
+                />
+              </div>
+              <div id="childMiddleName_3">
+                <input
+                  v-model="allDivsWithInput.childMiddleName.childMiddleName_3"
+                />
+              </div>
+            </div>
+
+            <div id="childBirthDate_day">
+              <div id="childBirthDate_day_1">
+                <input
                   maxlength="2"
                   class="textCenter"
-                  v-model="allDivsWithInput.childBirthDate_day.childBirthDate_day_1"
-              >
-            </div>
-            <div id="childBirthDate_day_2">
-              <input
+                  v-model="
+                    allDivsWithInput.childBirthDate_day.childBirthDate_day_1
+                  "
+                />
+              </div>
+              <div id="childBirthDate_day_2">
+                <input
                   maxlength="2"
                   class="textCenter"
-                  v-model="allDivsWithInput.childBirthDate_day.childBirthDate_day_2"
-              >
-            </div>
-            <div id="childBirthDate_day_3">
-              <input
+                  v-model="
+                    allDivsWithInput.childBirthDate_day.childBirthDate_day_2
+                  "
+                />
+              </div>
+              <div id="childBirthDate_day_3">
+                <input
                   maxlength="2"
                   class="textCenter"
-                  v-model="allDivsWithInput.childBirthDate_day.childBirthDate_day_3"
-              >
+                  v-model="
+                    allDivsWithInput.childBirthDate_day.childBirthDate_day_3
+                  "
+                />
+              </div>
             </div>
-          </div>
 
-          <div id="childBirthDate_month">
-            <div id="childBirthDate_month_1">
-              <input
+            <div id="childBirthDate_month">
+              <div id="childBirthDate_month_1">
+                <input
                   maxlength="2"
                   class="textCenter"
-                  v-model="allDivsWithInput.childBirthDate_month.childBirthDate_month_1"
-              >
-            </div>
-            <div id="childBirthDate_month_2">
-              <input
+                  v-model="
+                    allDivsWithInput.childBirthDate_month.childBirthDate_month_1
+                  "
+                />
+              </div>
+              <div id="childBirthDate_month_2">
+                <input
                   maxlength="2"
                   class="textCenter"
-                  v-model="allDivsWithInput.childBirthDate_month.childBirthDate_month_2"
-              >
-            </div>
-            <div id="childBirthDate_month_3">
-              <input
+                  v-model="
+                    allDivsWithInput.childBirthDate_month.childBirthDate_month_2
+                  "
+                />
+              </div>
+              <div id="childBirthDate_month_3">
+                <input
                   maxlength="2"
                   class="textCenter"
-                  v-model="allDivsWithInput.childBirthDate_month.childBirthDate_month_3"
-              >
+                  v-model="
+                    allDivsWithInput.childBirthDate_month.childBirthDate_month_3
+                  "
+                />
+              </div>
             </div>
-          </div>
 
-          <div id="childBirthDate_year">
-            <div id="childBirthDate_year_1">
-              <input
+            <div id="childBirthDate_year">
+              <div id="childBirthDate_year_1">
+                <input
                   maxlength="4"
                   class="textCenter"
-                  v-model="allDivsWithInput.childBirthDate_year.childBirthDate_year_1"
-              >
-            </div>
-            <div id="childBirthDate_year_2">
-              <input
+                  v-model="
+                    allDivsWithInput.childBirthDate_year.childBirthDate_year_1
+                  "
+                />
+              </div>
+              <div id="childBirthDate_year_2">
+                <input
                   maxlength="4"
                   class="textCenter"
-                  v-model="allDivsWithInput.childBirthDate_year.childBirthDate_year_2"
-              >
-            </div>
-            <div id="childBirthDate_year_3">
-              <input
+                  v-model="
+                    allDivsWithInput.childBirthDate_year.childBirthDate_year_2
+                  "
+                />
+              </div>
+              <div id="childBirthDate_year_3">
+                <input
                   maxlength="4"
                   class="textCenter"
-                  v-model="allDivsWithInput.childBirthDate_year.childBirthDate_year_3"
-              >
+                  v-model="
+                    allDivsWithInput.childBirthDate_year.childBirthDate_year_3
+                  "
+                />
+              </div>
             </div>
           </div>
-        </div>
 
-        <div id="sp9" class="bgGrey">
-                        <span>
-                            <strong>9.Адрас месца жыхарства</strong>
-                            – назва вобласцi, раёна, сельсавета,
-                            горада (пасёлка, вёскi), вулiцы, дом №,
-                            корпус №, кватэра №</span></div>
-
-        <div id="sp10">
-          <div id="sp101">
-            <div id="sp1011" class="bgGrey"><span>па беларуску</span></div>
-            <div id="sp1012" class="bgGrey"><span>па руску</span></div>
+          <div id="sp9" class="bgGrey">
+            <span>
+              <strong>9.Адрас месца жыхарства</strong>
+              – назва вобласцi, раёна, сельсавета, горада (пасёлка, вёскi),
+              вулiцы, дом №, корпус №, кватэра №</span
+            >
           </div>
 
-          <div id="sp102">
-            <div id="addressBel">
-              <input
+          <div id="sp10">
+            <div id="sp101">
+              <div id="sp1011" class="bgGrey"><span>па беларуску</span></div>
+              <div id="sp1012" class="bgGrey"><span>па руску</span></div>
+            </div>
+
+            <div id="sp102">
+              <div id="addressBel">
+                <input
                   placeholder="г. ГРОДНА, ВУЛ. ГОРКАГА д. 29 кв. 15"
                   v-model="allDivsWithInput.addressBel"
-              >
-            </div>
-            <div id="addressRus">
-              <input
+                />
+              </div>
+              <div id="addressRus">
+                <input
                   placeholder="г. ГРОДНО, УЛ. ГОРЬКОГО д. 29 кв. 15"
                   v-model="allDivsWithInput.addressRus"
-              >
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-
-    <div id="twoPage">
-      <div id="sl1" class="bgGrey">
-                    <span><strong>10.Знаходжанне ў замежным грамадзянстве</strong>
-                    (з якой краiны прыбыў, калi набыў грамадзянства РБ, на падставе якога дакумента)</span>
-      </div>
-
-      <div id="abroad_1">
-        <input placeholder="НЕ ЗНАХОДЗIЛАСЯ" v-model="allDivsWithInput.abroad_1">
-      </div>
-
-      <div id="abroad_2"><input v-model="allDivsWithInput.abroad_2"></div>
-
-      <div id="sl4">
-        <div id="sl41" class="bgGrey"><span><strong>Подпiс грамадзянiна</strong></span></div>
-        <div id="sl42"></div>
-        <div id="sl43" class="bgGrey"><span><strong>Дата</strong></span></div>
-        <div id="date_1">
-          <input maxlength="2" class="textCenter" v-model="allDivsWithInput.date_1">
+      <div id="twoPage">
+        <div id="sl1" class="bgGrey">
+          <span
+            ><strong>10.Знаходжанне ў замежным грамадзянстве</strong> (з якой
+            краiны прыбыў, калi набыў грамадзянства РБ, на падставе якога
+            дакумента)</span
+          >
         </div>
-        <div id="date_2">
-          <input maxlength="2" class="textCenter" v-model="allDivsWithInput.date_2">
+
+        <div id="abroad_1">
+          <input
+            placeholder="НЕ ЗНАХОДЗIЛАСЯ"
+            v-model="allDivsWithInput.abroad_1"
+          />
         </div>
-        <div id="sl46">
-          <div id="date_3">
-            <input maxlength="4" class="textCenter" v-model="allDivsWithInput.date_3">
+
+        <div id="abroad_2"><input v-model="allDivsWithInput.abroad_2" /></div>
+
+        <div id="sl4">
+          <div id="sl41" class="bgGrey">
+            <span><strong>Подпiс грамадзянiна</strong></span>
           </div>
-          <div id="sl462"><span>г.</span></div>
-        </div>
-        <div id="sl47" class="bgGrey">
-          <span><strong>Сведчу</strong></span>
-          <span>(подпiс, прозвiшча)</span>
-        </div>
-        <div id="sl48"></div>
-        <div id="lastName"><input v-model="allDivsWithInput.lastName"></div>
-      </div>
-
-      <div id="sl5" class="bgGrey"><span><strong>11. Падставы для выдачы пашпарта</strong></span></div>
-
-      <div id="sl6">
-        <div id="sl61" class="bgGrey"><span><strong>Назва дакумента</strong></span></div>
-        <div id="sl62" class="bgGrey"><span><strong>Серыя</strong></span></div>
-        <div id="sl63" class="bgGrey"><span><strong>Нумар</strong></span></div>
-        <div id="sl64" class="bgGrey"><span><strong>Дата, а/з</strong></span></div>
-        <div id="sl65" class="bgGrey"><span><strong>Кiм выдадзены</strong></span></div>
-      </div>
-
-      <div id="sl7">
-        <div id="docName1">
-          <div id="docName1_1">
-            <input placeholder="ПАШПАРТ" v-model="allDivsWithInput.docName1.docName1_1">
+          <div id="sl42"></div>
+          <div id="sl43" class="bgGrey">
+            <span><strong>Дата</strong></span>
           </div>
-          <div id="docName1_2"><input v-model="allDivsWithInput.docName1.docName1_2"></div>
-        </div>
-
-        <div id="docSeries_1">
-          <input maxlength="4" class="textCenter" placeholder="КН" v-model="allDivsWithInput.docSeries_1">
-        </div>
-
-        <div id="docNum_1">
-          <input class="textCenter" placeholder="1234567" v-model="allDivsWithInput.docNum_1">
-        </div>
-
-        <div id="sl74">
-          <div id="docDate1">
-            <div id="docDate1_1">
+          <div id="date_1">
+            <input
+              maxlength="2"
+              class="textCenter"
+              v-model="allDivsWithInput.date_1"
+            />
+          </div>
+          <div id="date_2">
+            <input
+              maxlength="2"
+              class="textCenter"
+              v-model="allDivsWithInput.date_2"
+            />
+          </div>
+          <div id="sl46">
+            <div id="date_3">
               <input
+                maxlength="4"
+                class="textCenter"
+                v-model="allDivsWithInput.date_3"
+              />
+            </div>
+            <div id="sl462"><span>г.</span></div>
+          </div>
+          <div id="sl47" class="bgGrey">
+            <span><strong>Сведчу</strong></span>
+            <span>(подпiс, прозвiшча)</span>
+          </div>
+          <div id="sl48"></div>
+          <div id="lastName"><input v-model="allDivsWithInput.lastName" /></div>
+        </div>
+
+        <div id="sl5" class="bgGrey">
+          <span><strong>11. Падставы для выдачы пашпарта</strong></span>
+        </div>
+
+        <div id="sl6">
+          <div id="sl61" class="bgGrey">
+            <span><strong>Назва дакумента</strong></span>
+          </div>
+          <div id="sl62" class="bgGrey">
+            <span><strong>Серыя</strong></span>
+          </div>
+          <div id="sl63" class="bgGrey">
+            <span><strong>Нумар</strong></span>
+          </div>
+          <div id="sl64" class="bgGrey">
+            <span><strong>Дата, а/з</strong></span>
+          </div>
+          <div id="sl65" class="bgGrey">
+            <span><strong>Кiм выдадзены</strong></span>
+          </div>
+        </div>
+
+        <div id="sl7">
+          <div id="docName1">
+            <div id="docName1_1">
+              <input
+                placeholder="ПАШПАРТ"
+                v-model="allDivsWithInput.docName1.docName1_1"
+              />
+            </div>
+            <div id="docName1_2">
+              <input v-model="allDivsWithInput.docName1.docName1_2" />
+            </div>
+          </div>
+
+          <div id="docSeries_1">
+            <input
+              maxlength="4"
+              class="textCenter"
+              placeholder="КН"
+              v-model="allDivsWithInput.docSeries_1"
+            />
+          </div>
+
+          <div id="docNum_1">
+            <input
+              class="textCenter"
+              placeholder="1234567"
+              v-model="allDivsWithInput.docNum_1"
+            />
+          </div>
+
+          <div id="sl74">
+            <div id="docDate1">
+              <div id="docDate1_1">
+                <input
                   maxlength="2"
                   class="textCenter"
                   placeholder="01"
                   v-model="allDivsWithInput.docDate1.docDate1_1"
-              >
-            </div>
-            <div id="docDate1_2">
-              <input
+                />
+              </div>
+              <div id="docDate1_2">
+                <input
                   maxlength="2"
                   class="textCenter"
                   placeholder="09"
                   v-model="allDivsWithInput.docDate1.docDate1_2"
-              >
-            </div>
-            <div id="docDate1_3">
-              <input
+                />
+              </div>
+              <div id="docDate1_3">
+                <input
                   maxlength="4"
                   class="textCenter"
                   placeholder="2014"
                   v-model="allDivsWithInput.docDate1.docDate1_3"
-              >
+                />
+              </div>
+            </div>
+
+            <div id="docRegOfficeNum_1">
+              <input
+                class="textCenter"
+                v-model="allDivsWithInput.docRegOfficeNum_1"
+              />
             </div>
           </div>
 
-          <div id="docRegOfficeNum_1">
-            <input class="textCenter" v-model="allDivsWithInput.docRegOfficeNum_1">
-          </div>
-        </div>
-
-        <div id="docDepartName1">
-          <div id="docDepartName1_1">
-            <input
+          <div id="docDepartName1">
+            <div id="docDepartName1_1">
+              <input
                 placeholder="ЛЕНIНСКIМ РАУС г. ГРОДНА"
                 v-model="allDivsWithInput.docDepartName1.docDepartName1_1"
-            >
-          </div>
-          <div id="docDepartName1_2">
-            <input v-model="allDivsWithInput.docDepartName1.docDepartName1_2">
-          </div>
-        </div>
-      </div>
-
-      <div id="sl8">
-        <div id="docName2">
-          <div id="docName2_1">
-            <input placeholder="ПАСВЕДЧАННЕ" v-model="allDivsWithInput.docName2.docName2_1">
-          </div>
-          <div id="docName2_2">
-            <input placeholder="АБ ШЛЮБЕ" v-model="allDivsWithInput.docName2.docName2_2">
+              />
+            </div>
+            <div id="docDepartName1_2">
+              <input
+                v-model="allDivsWithInput.docDepartName1.docDepartName1_2"
+              />
+            </div>
           </div>
         </div>
 
-        <div id="docSeries_2">
-          <input
+        <div id="sl8">
+          <div id="docName2">
+            <div id="docName2_1">
+              <input
+                placeholder="ПАСВЕДЧАННЕ"
+                v-model="allDivsWithInput.docName2.docName2_1"
+              />
+            </div>
+            <div id="docName2_2">
+              <input
+                placeholder="АБ ШЛЮБЕ"
+                v-model="allDivsWithInput.docName2.docName2_2"
+              />
+            </div>
+          </div>
+
+          <div id="docSeries_2">
+            <input
               maxlength="4"
               class="textCenter"
               placeholder="1-ДР"
               v-model="allDivsWithInput.docSeries_2"
-          >
-        </div>
+            />
+          </div>
 
-        <div id="docNum_2">
-          <input
+          <div id="docNum_2">
+            <input
               class="textCenter"
               placeholder="5426897"
               v-model="allDivsWithInput.docNum_2"
-          >
-        </div>
+            />
+          </div>
 
-        <div id="sl84">
-          <div id="docDate2">
-            <div id="docDate2_1">
-              <input
+          <div id="sl84">
+            <div id="docDate2">
+              <div id="docDate2_1">
+                <input
                   maxlength="2"
                   class="textCenter"
                   placeholder="02"
                   v-model="allDivsWithInput.docDate2.docDate2_1"
-              >
-            </div>
-            <div id="docDate2_2">
-              <input
+                />
+              </div>
+              <div id="docDate2_2">
+                <input
                   maxlength="2"
                   class="textCenter"
                   placeholder="11"
                   v-model="allDivsWithInput.docDate2.docDate2_2"
-              >
-            </div>
-            <div id="docDate2_3">
-              <input
+                />
+              </div>
+              <div id="docDate2_3">
+                <input
                   maxlength="4"
                   class="textCenter"
                   placeholder="2015"
                   v-model="allDivsWithInput.docDate2.docDate2_3"
-              >
+                />
+              </div>
             </div>
-          </div>
 
-          <div id="docRegOfficeNum_2">
-            <input
+            <div id="docRegOfficeNum_2">
+              <input
                 class="textCenter"
                 placeholder="а/з 3251"
                 v-model="allDivsWithInput.docRegOfficeNum_2"
-            >
+              />
+            </div>
           </div>
-        </div>
 
-        <div id="docDepartName2">
-          <div id="docDepartName2_1">
-            <input
+          <div id="docDepartName2">
+            <div id="docDepartName2_1">
+              <input
                 placeholder="А/ЗАГС КАСТРЫЧНIЦКАГА Р-НА г. ГРОДНА"
                 v-model="allDivsWithInput.docDepartName2.docDepartName2_1"
-            >
-          </div>
-          <div id="docDepartName2_2">
-            <input v-model="allDivsWithInput.docDepartName2.docDepartName2_2">
-          </div>
-        </div>
-      </div>
-
-      <div id="sl9">
-        <div id="docName3">
-          <div id="docName3_1"><input v-model="allDivsWithInput.docName3.docName3_1"></div>
-          <div id="docName3_2"><input v-model="allDivsWithInput.docName3.docName3_2"></div>
-        </div>
-
-        <div id="docSeries_3">
-          <input maxlength="4" class="textCenter" v-model="allDivsWithInput.docSeries_3">
-        </div>
-
-        <div id="docNum_3"><input class="textCenter" v-model="allDivsWithInput.docNum_3"></div>
-
-        <div id="sl94">
-          <div id="docDate3">
-            <div id="docDate3_1">
-              <input maxlength="2" class="textCenter" v-model="allDivsWithInput.docDate3.docDate3_1">
+              />
             </div>
-            <div id="docDate3_2">
-              <input maxlength="2" class="textCenter" v-model="allDivsWithInput.docDate3.docDate3_2">
-            </div>
-            <div id="docDate3_3">
-              <input maxlength="4" class="textCenter" v-model="allDivsWithInput.docDate3.docDate3_3">
-            </div>
-          </div>
-
-          <div id="docRegOfficeNum_3">
-            <input class="textCenter" v-model="allDivsWithInput.docRegOfficeNum_3">
-          </div>
-        </div>
-
-        <div id="docDepartName3">
-          <div id="docDepartName3_1">
-            <input v-model="allDivsWithInput.docDepartName3.docDepartName3_1">
-          </div>
-          <div id="docDepartName3_2">
-            <input v-model="allDivsWithInput.docDepartName3.docDepartName3_2">
-          </div>
-        </div>
-      </div>
-
-      <div id="sl10" class="bgGrey">
-                    <span><strong>12.Заяву i прадстаýленыя дакументы,
-                        якiя пацвярджаюць грамадзянства Рэспублiкi Беларусь, прыняý(ла)
-                        (прозвiшча супрацоýнiка службы, подпiс, дата)</strong></span>
-      </div>
-
-      <div id="sl11">
-        <div id="emplName_1"><input v-model="allDivsWithInput.emplName_1"></div>
-        <div id="date_4">
-          <input maxlength="2" class="textCenter" v-model="allDivsWithInput.date_4">
-        </div>
-        <div id="date_5">
-          <input maxlength="2" class="textCenter" v-model="allDivsWithInput.date_5">
-        </div>
-        <div id="date_6">
-          <input maxlength="4" class="textCenter" v-model="allDivsWithInput.date_6">
-        </div>
-      </div>
-
-      <div id="sl12">
-        <div id="sl121" class="bgGrey">
-          <span><strong>13.Пашпарт аформiý</strong></span>
-          <small>(пасада, прозвiшча, подпiс, дата)</small>
-        </div>
-        <div id="emplName_2"><input v-model="allDivsWithInput.emplName_2"></div>
-        <div id="date_7">
-          <input maxlength="2" class="textCenter" v-model="allDivsWithInput.date_7">
-        </div>
-        <div id="date_8">
-          <input maxlength="2" class="textCenter" v-model="allDivsWithInput.date_8">
-        </div>
-        <div id="date_9">
-          <input maxlength="4" class="textCenter" v-model="allDivsWithInput.date_9">
-        </div>
-      </div>
-
-      <div id="sl13">
-        <div id="sl131" class="bgGrey">
-          <span><strong>14.Пашпарт выдаý</strong></span>
-          <small>(пасада, назва органа, прозвiшча, подпiс)</small>
-        </div>
-        <div id="emplName_3"><input v-model="allDivsWithInput.emplName_3"></div>
-      </div>
-
-      <div id="sl14">
-        <div id="sl141">
-          <div id="sl1411">
-            <div id="sl14111" class="bgGrey">
-              <span><strong>Пашпарт</strong></span>
-              <span><strong>серыi</strong></span>
-            </div>
-
-            <div id="newPassportSeries">
-              <input maxlength="2" class="textCenter" v-model="allDivsWithInput.newPassportSeries">
-            </div>
-
-            <div id="sl14113" class="bgGrey"><span><strong>нумар</strong></span></div>
-          </div>
-
-          <div id="sl1412" class="bgGrey"><span><strong>Раней атрыманы пашпарт серыi</strong></span></div>
-        </div>
-
-        <div id="sl142">
-          <div id="sl1421">
-            <div id="newPassportNumber">
-              <input class="textCenter" v-model="allDivsWithInput.newPassportNumber">
-            </div>
-
-            <div id="sl14212" class="bgGrey">
-              <span><strong>ад</strong></span>
-            </div>
-          </div>
-
-          <div id="sl1422">
-            <div id="oldPassportSeries">
-              <input maxlength="2" class="textCenter" v-model="allDivsWithInput.oldPassportSeries">
-            </div>
-
-            <div id="sl14222" class="bgGrey">
-              <span><strong>нумар</strong></span>
-            </div>
-          </div>
-        </div>
-
-        <div id="sl143">
-          <div id="sl1431">
-            <div id="date_10">
-              <input maxlength="2" class="textCenter" v-model="allDivsWithInput.date_10">
-            </div>
-            <div id="date_11">
-              <input maxlength="2" class="textCenter" v-model="allDivsWithInput.date_11">
-            </div>
-            <div id="date_12">
-              <input maxlength="4" class="textCenter" v-model="allDivsWithInput.date_12">
-            </div>
-          </div>
-
-          <div id="oldPassportNumber">
-            <input class="textCenter" v-model="allDivsWithInput.oldPassportNumber">
-          </div>
-        </div>
-
-        <div id="sl144">
-          <div id="sl1441">
-            <div id="sl14411" class="bgGrey">
-              <span><strong>атрымаý (ла)</strong> (подпiс, дата)</span></div>
-
-            <div id="sl14412"></div>
-          </div>
-
-          <div id="sl1442" class="bgGrey">
-                            <span><strong>здадзены</strong>
-                            (дата, калi не – адзначыць прычыну)</span></div>
-        </div>
-
-        <div id="date_13">
-          <div id="date_13_1">
-            <input maxlength="2" class="textCenter" v-model="allDivsWithInput.date_13.date_13_1">
-          </div>
-          <div id="date_13_2">
-            <input maxlength="2" class="textCenter" v-model="allDivsWithInput.date_13.date_13_2">
-          </div>
-        </div>
-
-        <div id="date_14">
-          <div id="date_14_1">
-            <input maxlength="2" class="textCenter" v-model="allDivsWithInput.date_14.date_14_1">
-          </div>
-          <div id="date_14_2">
-            <input maxlength="2" class="textCenter" v-model="allDivsWithInput.date_14.date_14_2">
-          </div>
-        </div>
-
-        <div id="date_15">
-          <div id="date_15_1">
-            <input maxlength="4" class="textCenter" v-model="allDivsWithInput.date_15.date_15_1">
-          </div>
-          <div id="date_15_2">
-            <input maxlength="4" class="textCenter" v-model="allDivsWithInput.date_15.date_15_2">
-          </div>
-        </div>
-      </div>
-
-      <div id="other"><input v-model="allDivsWithInput.other"></div>
-
-      <div id="sl16">
-        <span><strong>службовыя адзнакi:</strong></span>
-      </div>
-
-      <div id="sl17">
-        <div id="sl171">
-          <div id="sl1711">
-            <span>Уведомлен(а) о получении документа</span>
-            <span>не позднее 1 месяца со дня подачи заявления</span>
-            <span>&nbsp;</span>
-          </div>
-
-          <div id="sl1712">
-            <small>подпись заявителя</small>
-          </div>
-
-          <div id="sl1713">
-            <span>Прошу оформить документ в ускоренном порядке</span>
-            <span>в срок не более 15 дней. Уведомлен(а)</span>
-            <span>о получении документа не позднее 15 дней</span>
-            <span>&nbsp;</span>
-          </div>
-
-
-          <div id="sl1714">
-            <small>подпись заявителя</small>
-          </div>
-        </div>
-
-        <div id="sl172">
-          <div id="sl1721">
-            <span>Прошу проинформировать меня СМС о готовности документа</span>
-            <span>по телефону:</span>
-          </div>
-
-          <div id="phoneNumber">
-            <div id="sl17221"><strong>3</strong></div>
-            <div id="sl17222"><strong>7</strong></div>
-            <div id="sl17223"><strong>5</strong></div>
-            <div id="phoneNumber_1">
+            <div id="docDepartName2_2">
               <input
+                v-model="allDivsWithInput.docDepartName2.docDepartName2_2"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div id="sl9">
+          <div id="docName3">
+            <div id="docName3_1">
+              <input v-model="allDivsWithInput.docName3.docName3_1" />
+            </div>
+            <div id="docName3_2">
+              <input v-model="allDivsWithInput.docName3.docName3_2" />
+            </div>
+          </div>
+
+          <div id="docSeries_3">
+            <input
+              maxlength="4"
+              class="textCenter"
+              v-model="allDivsWithInput.docSeries_3"
+            />
+          </div>
+
+          <div id="docNum_3">
+            <input class="textCenter" v-model="allDivsWithInput.docNum_3" />
+          </div>
+
+          <div id="sl94">
+            <div id="docDate3">
+              <div id="docDate3_1">
+                <input
+                  maxlength="2"
+                  class="textCenter"
+                  v-model="allDivsWithInput.docDate3.docDate3_1"
+                />
+              </div>
+              <div id="docDate3_2">
+                <input
+                  maxlength="2"
+                  class="textCenter"
+                  v-model="allDivsWithInput.docDate3.docDate3_2"
+                />
+              </div>
+              <div id="docDate3_3">
+                <input
+                  maxlength="4"
+                  class="textCenter"
+                  v-model="allDivsWithInput.docDate3.docDate3_3"
+                />
+              </div>
+            </div>
+
+            <div id="docRegOfficeNum_3">
+              <input
+                class="textCenter"
+                v-model="allDivsWithInput.docRegOfficeNum_3"
+              />
+            </div>
+          </div>
+
+          <div id="docDepartName3">
+            <div id="docDepartName3_1">
+              <input
+                v-model="allDivsWithInput.docDepartName3.docDepartName3_1"
+              />
+            </div>
+            <div id="docDepartName3_2">
+              <input
+                v-model="allDivsWithInput.docDepartName3.docDepartName3_2"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div id="sl10" class="bgGrey">
+          <span
+            ><strong
+              >12.Заяву i прадстаýленыя дакументы, якiя пацвярджаюць
+              грамадзянства Рэспублiкi Беларусь, прыняý(ла) (прозвiшча
+              супрацоýнiка службы, подпiс, дата)</strong
+            ></span
+          >
+        </div>
+
+        <div id="sl11">
+          <div id="emplName_1">
+            <input v-model="allDivsWithInput.emplName_1" />
+          </div>
+          <div id="date_4">
+            <input
+              maxlength="2"
+              class="textCenter"
+              v-model="allDivsWithInput.date_4"
+            />
+          </div>
+          <div id="date_5">
+            <input
+              maxlength="2"
+              class="textCenter"
+              v-model="allDivsWithInput.date_5"
+            />
+          </div>
+          <div id="date_6">
+            <input
+              maxlength="4"
+              class="textCenter"
+              v-model="allDivsWithInput.date_6"
+            />
+          </div>
+        </div>
+
+        <div id="sl12">
+          <div id="sl121" class="bgGrey">
+            <span><strong>13.Пашпарт аформiý</strong></span>
+            <small>(пасада, прозвiшча, подпiс, дата)</small>
+          </div>
+          <div id="emplName_2">
+            <input v-model="allDivsWithInput.emplName_2" />
+          </div>
+          <div id="date_7">
+            <input
+              maxlength="2"
+              class="textCenter"
+              v-model="allDivsWithInput.date_7"
+            />
+          </div>
+          <div id="date_8">
+            <input
+              maxlength="2"
+              class="textCenter"
+              v-model="allDivsWithInput.date_8"
+            />
+          </div>
+          <div id="date_9">
+            <input
+              maxlength="4"
+              class="textCenter"
+              v-model="allDivsWithInput.date_9"
+            />
+          </div>
+        </div>
+
+        <div id="sl13">
+          <div id="sl131" class="bgGrey">
+            <span><strong>14.Пашпарт выдаý</strong></span>
+            <small>(пасада, назва органа, прозвiшча, подпiс)</small>
+          </div>
+          <div id="emplName_3">
+            <input v-model="allDivsWithInput.emplName_3" />
+          </div>
+        </div>
+
+        <div id="sl14">
+          <div id="sl141">
+            <div id="sl1411">
+              <div id="sl14111" class="bgGrey">
+                <span><strong>Пашпарт</strong></span>
+                <span><strong>серыi</strong></span>
+              </div>
+
+              <div id="newPassportSeries">
+                <input
+                  maxlength="2"
+                  class="textCenter"
+                  v-model="allDivsWithInput.newPassportSeries"
+                />
+              </div>
+
+              <div id="sl14113" class="bgGrey">
+                <span><strong>нумар</strong></span>
+              </div>
+            </div>
+
+            <div id="sl1412" class="bgGrey">
+              <span><strong>Раней атрыманы пашпарт серыi</strong></span>
+            </div>
+          </div>
+
+          <div id="sl142">
+            <div id="sl1421">
+              <div id="newPassportNumber">
+                <input
+                  class="textCenter"
+                  v-model="allDivsWithInput.newPassportNumber"
+                />
+              </div>
+
+              <div id="sl14212" class="bgGrey">
+                <span><strong>ад</strong></span>
+              </div>
+            </div>
+
+            <div id="sl1422">
+              <div id="oldPassportSeries">
+                <input
+                  maxlength="2"
+                  class="textCenter"
+                  v-model="allDivsWithInput.oldPassportSeries"
+                />
+              </div>
+
+              <div id="sl14222" class="bgGrey">
+                <span><strong>нумар</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <div id="sl143">
+            <div id="sl1431">
+              <div id="date_10">
+                <input
+                  maxlength="2"
+                  class="textCenter"
+                  v-model="allDivsWithInput.date_10"
+                />
+              </div>
+              <div id="date_11">
+                <input
+                  maxlength="2"
+                  class="textCenter"
+                  v-model="allDivsWithInput.date_11"
+                />
+              </div>
+              <div id="date_12">
+                <input
+                  maxlength="4"
+                  class="textCenter"
+                  v-model="allDivsWithInput.date_12"
+                />
+              </div>
+            </div>
+
+            <div id="oldPassportNumber">
+              <input
+                class="textCenter"
+                v-model="allDivsWithInput.oldPassportNumber"
+              />
+            </div>
+          </div>
+
+          <div id="sl144">
+            <div id="sl1441">
+              <div id="sl14411" class="bgGrey">
+                <span><strong>атрымаý (ла)</strong> (подпiс, дата)</span>
+              </div>
+
+              <div id="sl14412"></div>
+            </div>
+
+            <div id="sl1442" class="bgGrey">
+              <span
+                ><strong>здадзены</strong> (дата, калi не – адзначыць
+                прычыну)</span
+              >
+            </div>
+          </div>
+
+          <div id="date_13">
+            <div id="date_13_1">
+              <input
+                maxlength="2"
+                class="textCenter"
+                v-model="allDivsWithInput.date_13.date_13_1"
+              />
+            </div>
+            <div id="date_13_2">
+              <input
+                maxlength="2"
+                class="textCenter"
+                v-model="allDivsWithInput.date_13.date_13_2"
+              />
+            </div>
+          </div>
+
+          <div id="date_14">
+            <div id="date_14_1">
+              <input
+                maxlength="2"
+                class="textCenter"
+                v-model="allDivsWithInput.date_14.date_14_1"
+              />
+            </div>
+            <div id="date_14_2">
+              <input
+                maxlength="2"
+                class="textCenter"
+                v-model="allDivsWithInput.date_14.date_14_2"
+              />
+            </div>
+          </div>
+
+          <div id="date_15">
+            <div id="date_15_1">
+              <input
+                maxlength="4"
+                class="textCenter"
+                v-model="allDivsWithInput.date_15.date_15_1"
+              />
+            </div>
+            <div id="date_15_2">
+              <input
+                maxlength="4"
+                class="textCenter"
+                v-model="allDivsWithInput.date_15.date_15_2"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div id="other"><input v-model="allDivsWithInput.other" /></div>
+
+        <div id="sl16">
+          <span><strong>службовыя адзнакi:</strong></span>
+        </div>
+
+        <div id="sl17">
+          <div id="sl171">
+            <div id="sl1711">
+              <span>Уведомлен(а) о получении документа</span>
+              <span>не позднее 1 месяца со дня подачи заявления</span>
+              <span>&nbsp;</span>
+            </div>
+
+            <div id="sl1712">
+              <small>подпись заявителя</small>
+            </div>
+
+            <div id="sl1713">
+              <span>Прошу оформить документ в ускоренном порядке</span>
+              <span>в срок не более 15 дней. Уведомлен(а)</span>
+              <span>о получении документа не позднее 15 дней</span>
+              <span>&nbsp;</span>
+            </div>
+
+            <div id="sl1714">
+              <small>подпись заявителя</small>
+            </div>
+          </div>
+
+          <div id="sl172">
+            <div id="sl1721">
+              <span
+                >Прошу проинформировать меня СМС о готовности документа</span
+              >
+              <span>по телефону:</span>
+            </div>
+
+            <div id="phoneNumber">
+              <div id="sl17221"><strong>3</strong></div>
+              <div id="sl17222"><strong>7</strong></div>
+              <div id="sl17223"><strong>5</strong></div>
+              <div id="phoneNumber_1">
+                <input
                   maxlength="1"
                   class="textCenter"
                   v-model="allDivsWithInput.phoneNumber.phoneNumber_1"
-              >
-            </div>
-            <div id="phoneNumber_2">
-              <input
+                />
+              </div>
+              <div id="phoneNumber_2">
+                <input
                   maxlength="1"
                   class="textCenter"
                   v-model="allDivsWithInput.phoneNumber.phoneNumber_2"
-              >
-            </div>
-            <div id="phoneNumber_3">
-              <input
+                />
+              </div>
+              <div id="phoneNumber_3">
+                <input
                   maxlength="1"
                   class="textCenter"
                   v-model="allDivsWithInput.phoneNumber.phoneNumber_3"
-              >
-            </div>
-            <div id="phoneNumber_4">
-              <input
+                />
+              </div>
+              <div id="phoneNumber_4">
+                <input
                   maxlength="1"
                   class="textCenter"
                   v-model="allDivsWithInput.phoneNumber.phoneNumber_4"
-              >
-            </div>
-            <div id="phoneNumber_5">
-              <input
+                />
+              </div>
+              <div id="phoneNumber_5">
+                <input
                   maxlength="1"
                   class="textCenter"
                   v-model="allDivsWithInput.phoneNumber.phoneNumber_5"
-              >
-            </div>
-            <div id="phoneNumber_6">
-              <input
+                />
+              </div>
+              <div id="phoneNumber_6">
+                <input
                   maxlength="1"
                   class="textCenter"
                   v-model="allDivsWithInput.phoneNumber.phoneNumber_6"
-              >
-            </div>
-            <div id="phoneNumber_7">
-              <input
+                />
+              </div>
+              <div id="phoneNumber_7">
+                <input
                   maxlength="1"
                   class="textCenter"
                   v-model="allDivsWithInput.phoneNumber.phoneNumber_7"
-              >
-            </div>
-            <div id="phoneNumber_8">
-              <input
+                />
+              </div>
+              <div id="phoneNumber_8">
+                <input
                   maxlength="1"
                   class="textCenter"
                   v-model="allDivsWithInput.phoneNumber.phoneNumber_8"
-              >
-            </div>
-            <div id="phoneNumber_9">
-              <input
+                />
+              </div>
+              <div id="phoneNumber_9">
+                <input
                   maxlength="1"
                   class="textCenter"
                   v-model="allDivsWithInput.phoneNumber.phoneNumber_9"
-              >
-            </div>
-          </div>
-
-          <div id="sl1723">
-            <div id="sl17231">
-              <div id="sl172311">
-                <span>С условиями предоставления</span>
-                <span>услуги ознакомлен(а)</span>
-              </div>
-
-              <div id="sl172312">
-                <div id="sl1723121">
-                  <span>Оплата</span>
-                  <span>в ЕРИП:</span>
-                </div>
-
-                <div id="sl1723122">
-                  <span>госпошлина</span>
-                  <span>ускорение</span>
-                  <span>СМС</span>
-                </div>
-
-                <div id="payment">
-                  <template id="payment_1">
-                    <input type="checkbox" v-model="allDivsWithInput.payment.payment_1">
-                  </template>
-                  <template id="payment_2">
-                    <input type="checkbox" v-model="allDivsWithInput.payment.payment_2">
-                  </template>
-                  <template id="payment_3">
-                    <input type="checkbox" v-model="allDivsWithInput.payment.payment_3">
-                  </template>
-                </div>
+                />
               </div>
             </div>
 
-            <div id="sl17232">
-              <div id="sl172321">
-                <small>подпись заявителя</small>
+            <div id="sl1723">
+              <div id="sl17231">
+                <div id="sl172311">
+                  <span>С условиями предоставления</span>
+                  <span>услуги ознакомлен(а)</span>
+                </div>
+
+                <div id="sl172312">
+                  <div id="sl1723121">
+                    <span>Оплата</span>
+                    <span>в ЕРИП:</span>
+                  </div>
+
+                  <div id="sl1723122">
+                    <span>госпошлина</span>
+                    <span>ускорение</span>
+                    <span>СМС</span>
+                  </div>
+
+                  <div id="payment">
+                    <template id="payment_1">
+                      <input
+                        type="checkbox"
+                        v-model="allDivsWithInput.payment.payment_1"
+                      />
+                    </template>
+                    <template id="payment_2">
+                      <input
+                        type="checkbox"
+                        v-model="allDivsWithInput.payment.payment_2"
+                      />
+                    </template>
+                    <template id="payment_3">
+                      <input
+                        type="checkbox"
+                        v-model="allDivsWithInput.payment.payment_3"
+                      />
+                    </template>
+                  </div>
+                </div>
               </div>
 
-              <div id="sl172322">
-                <small>подпись заявителя</small>
+              <div id="sl17232">
+                <div id="sl172321">
+                  <small>подпись заявителя</small>
+                </div>
+
+                <div id="sl172322">
+                  <small>подпись заявителя</small>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
   </body>
 </template>
 
 <script>
-import {bus} from '@/main'
+import { bus } from "@/main";
+import Tooltip from "@/components/Tooltip";
 
 export default {
   data: () => ({
     allDivsWithInput: {
       orderNum: {
-        'orderNum_1': '',
-        'orderNum_2': '',
-        'orderNum_3': '',
-        'orderNum_4': ''
+        orderNum_1: "",
+        orderNum_2: "",
+        orderNum_3: "",
+        orderNum_4: "",
       },
       idNum: {
-        'idNum_1': '',
-        'idNum_2': '',
-        'idNum_3': '',
-        'idNum_4': '',
-        'idNum_5': '',
-        'idNum_6': '',
-        'idNum_7': '',
-        'idNum_8': '',
-        'idNum_9': '',
-        'idNum_10': '',
-        'idNum_11': '',
-        'idNum_12': '',
-        'idNum_13': '',
-        'idNum_14': ''
+        idNum_1: "",
+        idNum_2: "",
+        idNum_3: "",
+        idNum_4: "",
+        idNum_5: "",
+        idNum_6: "",
+        idNum_7: "",
+        idNum_8: "",
+        idNum_9: "",
+        idNum_10: "",
+        idNum_11: "",
+        idNum_12: "",
+        idNum_13: "",
+        idNum_14: "",
       },
       passDate: {
-        'passDate_1': '',
-        'passDate_2': '',
-        'passDate_3': ''
+        passDate_1: "",
+        passDate_2: "",
+        passDate_3: "",
       },
-      'departName': '',
-      'reason': '',
-      'lastNameBel': '',
-      'firstNameBel': '',
-      'middleNameBel': '',
-      'lastNameRus': '',
-      'firstNameRus': '',
-      'middleNameRus': '',
-      'lastNameLat': '',
-      'firstNameLat': '',
+      departName: "",
+      reason: "",
+      lastNameBel: "",
+      firstNameBel: "",
+      middleNameBel: "",
+      lastNameRus: "",
+      firstNameRus: "",
+      middleNameRus: "",
+      lastNameLat: "",
+      firstNameLat: "",
       birthDate: {
-        'birthDate_1': '',
-        'birthDate_2': '',
-        'birthDate_3': ''
+        birthDate_1: "",
+        birthDate_2: "",
+        birthDate_3: "",
       },
-      'cityBel': '',
-      'districtBel': '',
-      'regionBel': '',
-      'countryBel': '',
-      'cityRus': '',
-      'districtRus': '',
-      'regionRus': '',
-      'countryRus': '',
-      'sexM': '',
-      'sexW': '',
-      'fatherLastNameBel': '',
-      'motherLastNameBel': '',
-      'spouseLastNameBel': '',
-      'fatherFirstNameBel': '',
-      'motherFirstNameBel': '',
-      'spouseFirstNameBel': '',
-      'fatherMiddleNameBel': '',
-      'motherMiddleNameBel': '',
-      'spouseMiddleNameBel': '',
-      'lastNameBeforeWedding': '',
+      cityBel: "",
+      districtBel: "",
+      regionBel: "",
+      countryBel: "",
+      cityRus: "",
+      districtRus: "",
+      regionRus: "",
+      countryRus: "",
+      sexM: "",
+      sexW: "",
+      fatherLastNameBel: "",
+      motherLastNameBel: "",
+      spouseLastNameBel: "",
+      fatherFirstNameBel: "",
+      motherFirstNameBel: "",
+      spouseFirstNameBel: "",
+      fatherMiddleNameBel: "",
+      motherMiddleNameBel: "",
+      spouseMiddleNameBel: "",
+      lastNameBeforeWedding: "",
       spouseBirthDate: {
-        'birthDate_4': '',
-        'birthDate_5': '',
-        'birthDate_6': ''
+        birthDate_4: "",
+        birthDate_5: "",
+        birthDate_6: "",
       },
       regDate: {
-        'regDate_1': '',
-        'regDate_2': '',
-        'regDate_3': ''
+        regDate_1: "",
+        regDate_2: "",
+        regDate_3: "",
       },
-      'certificate': '',
-      'regOfficeNum': '',
-      'single': '',
-      'divorced': '',
-      'widow': '',
+      certificate: "",
+      regOfficeNum: "",
+      single: "",
+      divorced: "",
+      widow: "",
       child: {
-        'child_1': '',
-        'child_2': '',
-        'child_3': ''
+        child_1: "",
+        child_2: "",
+        child_3: "",
       },
       childLastName: {
-        'childLastName_1': '',
-        'childLastName_2': '',
-        'childLastName_3': ''
+        childLastName_1: "",
+        childLastName_2: "",
+        childLastName_3: "",
       },
       childFirstName: {
-        'childFirstName_1': '',
-        'childFirstName_2': '',
-        'childFirstName_3': ''
+        childFirstName_1: "",
+        childFirstName_2: "",
+        childFirstName_3: "",
       },
       childMiddleName: {
-        'childMiddleName_1': '',
-        'childMiddleName_2': '',
-        'childMiddleName_3': ''
+        childMiddleName_1: "",
+        childMiddleName_2: "",
+        childMiddleName_3: "",
       },
       childBirthDate_day: {
-        'childBirthDate_day_1': '',
-        'childBirthDate_day_2': '',
-        'childBirthDate_day_3': ''
+        childBirthDate_day_1: "",
+        childBirthDate_day_2: "",
+        childBirthDate_day_3: "",
       },
       childBirthDate_month: {
-        'childBirthDate_month_1': '',
-        'childBirthDate_month_2': '',
-        'childBirthDate_month_3': ''
+        childBirthDate_month_1: "",
+        childBirthDate_month_2: "",
+        childBirthDate_month_3: "",
       },
       childBirthDate_year: {
-        'childBirthDate_year_1': '',
-        'childBirthDate_year_2': '',
-        'childBirthDate_year_3': ''
+        childBirthDate_year_1: "",
+        childBirthDate_year_2: "",
+        childBirthDate_year_3: "",
       },
-      'addressBel': '',
-      'addressRus': '',
-      'abroad_1': '',
-      'abroad_2': '',
-      'date_1': '',
-      'date_2': '',
-      'date_3': '',
-      'lastName': '',
+      addressBel: "",
+      addressRus: "",
+      abroad_1: "",
+      abroad_2: "",
+      date_1: "",
+      date_2: "",
+      date_3: "",
+      lastName: "",
       docName1: {
-        'docName1_1': '',
-        'docName1_2': ''
+        docName1_1: "",
+        docName1_2: "",
       },
       docName2: {
-        'docName2_1': '',
-        'docName2_2': ''
+        docName2_1: "",
+        docName2_2: "",
       },
-      'docSeries_1': '',
-      'docSeries_2': '',
-      'docSeries_3': '',
-      'docNum_1': '',
-      'docNum_2': '',
-      'docNum_3': '',
+      docSeries_1: "",
+      docSeries_2: "",
+      docSeries_3: "",
+      docNum_1: "",
+      docNum_2: "",
+      docNum_3: "",
       docDate1: {
-        'docDate1_1': '',
-        'docDate1_2': '',
-        'docDate1_3': ''
+        docDate1_1: "",
+        docDate1_2: "",
+        docDate1_3: "",
       },
-      'docRegOfficeNum_1': '',
-      'docRegOfficeNum_2': '',
-      'docRegOfficeNum_3': '',
+      docRegOfficeNum_1: "",
+      docRegOfficeNum_2: "",
+      docRegOfficeNum_3: "",
       docDepartName1: {
-        'docDepartName1_1': '',
-        'docDepartName1_2': ''
+        docDepartName1_1: "",
+        docDepartName1_2: "",
       },
       docDate2: {
-        'docDate2_1': '',
-        'docDate2_2': '',
-        'docDate2_3': ''
+        docDate2_1: "",
+        docDate2_2: "",
+        docDate2_3: "",
       },
       docDepartName2: {
-        'docDepartName2_1': '',
-        'docDepartName2_2': ''
+        docDepartName2_1: "",
+        docDepartName2_2: "",
       },
       docName3: {
-        'docName3_1': '',
-        'docName3_2': ''
+        docName3_1: "",
+        docName3_2: "",
       },
       docDate3: {
-        'docDate3_1': '',
-        'docDate3_2': '',
-        'docDate3_3': ''
+        docDate3_1: "",
+        docDate3_2: "",
+        docDate3_3: "",
       },
       docDepartName3: {
-        'docDepartName3_1': '',
-        'docDepartName3_2': ''
+        docDepartName3_1: "",
+        docDepartName3_2: "",
       },
-      'emplName_1': '',
-      'emplName_2': '',
-      'emplName_3': '',
-      'date_4': '',
-      'date_5': '',
-      'date_6': '',
-      'date_7': '',
-      'date_8': '',
-      'date_9': '',
-      'date_10': '',
-      'date_11': '',
-      'date_12': '',
+      emplName_1: "",
+      emplName_2: "",
+      emplName_3: "",
+      date_4: "",
+      date_5: "",
+      date_6: "",
+      date_7: "",
+      date_8: "",
+      date_9: "",
+      date_10: "",
+      date_11: "",
+      date_12: "",
       date_13: {
-        'date_13_1': '',
-        'date_13_2': ''
+        date_13_1: "",
+        date_13_2: "",
       },
       date_14: {
-        'date_14_1': '',
-        'date_14_2': ''
+        date_14_1: "",
+        date_14_2: "",
       },
       date_15: {
-        'date_15_1': '',
-        'date_15_2': ''
+        date_15_1: "",
+        date_15_2: "",
       },
-      'newPassportSeries': '',
-      'newPassportNumber': '',
-      'oldPassportSeries': '',
-      'oldPassportNumber': '',
-      'other': '',
+      newPassportSeries: "",
+      newPassportNumber: "",
+      oldPassportSeries: "",
+      oldPassportNumber: "",
+      other: "",
       phoneNumber: {
-        'phoneNumber_1': '',
-        'phoneNumber_2': '',
-        'phoneNumber_3': '',
-        'phoneNumber_4': '',
-        'phoneNumber_5': '',
-        'phoneNumber_6': '',
-        'phoneNumber_7': '',
-        'phoneNumber_8': '',
-        'phoneNumber_9': ''
+        phoneNumber_1: "",
+        phoneNumber_2: "",
+        phoneNumber_3: "",
+        phoneNumber_4: "",
+        phoneNumber_5: "",
+        phoneNumber_6: "",
+        phoneNumber_7: "",
+        phoneNumber_8: "",
+        phoneNumber_9: "",
       },
       payment: {
-        'payment_1': '',
-        'payment_2': '',
-        'payment_3': ''
-      }
-    }
+        payment_1: "",
+        payment_2: "",
+        payment_3: "",
+      },
+    },
   }),
+  methods: {
+    clearSexW() {
+      this.allDivsWithInput.sexW = "";
+    },
+    clearSexM() {
+      this.allDivsWithInput.sexM = "";
+    },
+    clearDivorcedAndWidow() {
+      (this.allDivsWithInput.divorced = ""), (this.allDivsWithInput.widow = "");
+    },
+    clearSingleAndWidow() {
+      (this.allDivsWithInput.single = ""), (this.allDivsWithInput.widow = "");
+    },
+    clearSingleAndDivorced() {
+      (this.allDivsWithInput.single = ""),
+        (this.allDivsWithInput.divorced = "");
+    },
+    tooltipSpan(arg) {
+      bus.$emit("argument", arg);
+    },
+  },
   created() {
-    bus.$on('send-passport-data', async (email) => {
+    bus.$on("send-passport-data", async (email) => {
       const data = {
         email,
-        content: this.allDivsWithInput
+        content: this.allDivsWithInput,
       };
-      const response = await fetch(`${process.env.VUE_APP_BACKEND_ADDRESS}/api/send/Passport`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json;charset=utf-8',
-        },
-        body: JSON.stringify(data)
-      })
+      const response = await fetch(
+        `${process.env.VUE_APP_BACKEND_ADDRESS}/api/send/Passport`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json;charset=utf-8",
+          },
+          body: JSON.stringify(data),
+        }
+      );
       const result = await response.ok;
       if (result) {
-        alert('Сообщение отправлено!');
+        alert(this.$i18n.t("messageSent"));
       } else {
-        alert('Ошибка!');
+        alert(this.$i18n.t("error"));
       }
-    })
-  }
-}
+    });
+  },
+  components: {
+    Tooltip,
+  },
+};
 </script>
 
 <style scoped>
-
 @media print {
   ::-webkit-input-placeholder {
     color: white;
@@ -1457,6 +1857,9 @@ export default {
     line-height: 0.75rem;
   }
 
+  .hiddenForPrint {
+    display: none;
+  }
 }
 
 #document {
@@ -1473,11 +1876,11 @@ body {
 }
 
 span {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 div {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 small {
@@ -1496,7 +1899,6 @@ input {
 .textCenter {
   text-align: center;
 }
-
 
 #onePage {
   display: flex;
@@ -1572,7 +1974,9 @@ input {
   justify-content: center;
 }
 
-#orderNum_2, #orderNum_3, #orderNum_4 {
+#orderNum_2,
+#orderNum_3,
+#orderNum_4 {
   width: 20%;
   height: 100%;
   border-top: 1px solid black;
@@ -1615,10 +2019,20 @@ input {
   border: 1px solid black;
 }
 
-#idNum_1, #idNum_2, #idNum_3, #idNum_4,
-#idNum_5, #idNum_6, #idNum_7, #idNum_8,
-#idNum_9, #idNum_10, #idNum_11, #idNum_12,
-#idNum_13, #idNum_14 {
+#idNum_1,
+#idNum_2,
+#idNum_3,
+#idNum_4,
+#idNum_5,
+#idNum_6,
+#idNum_7,
+#idNum_8,
+#idNum_9,
+#idNum_10,
+#idNum_11,
+#idNum_12,
+#idNum_13,
+#idNum_14 {
   width: 5.521%;
   height: 100%;
   display: flex;
@@ -1646,7 +2060,8 @@ input {
   border-right: 1px solid black;
 }
 
-#passDate_1, #passDate_2 {
+#passDate_1,
+#passDate_2 {
   width: 16%;
   height: 100%;
   display: flex;
@@ -1812,7 +2227,9 @@ input {
   border-bottom: 1px solid black;
 }
 
-#st511 span, #st512 span, #st513 span {
+#st511 span,
+#st512 span,
+#st513 span {
   padding-left: 1%;
 }
 
@@ -1823,7 +2240,8 @@ input {
   flex-direction: column;
 }
 
-#lastNameBel, #firstNameBel {
+#lastNameBel,
+#firstNameBel {
   width: 100%;
   height: 33.333%;
   display: flex;
@@ -1832,7 +2250,6 @@ input {
   border-right: 1px solid black;
   border-bottom: 1px solid black;
 }
-
 
 #middleNameBel {
   width: 100%;
@@ -1851,7 +2268,8 @@ input {
   flex-direction: column;
 }
 
-#lastNameRus, #firstNameRus {
+#lastNameRus,
+#firstNameRus {
   width: 100%;
   height: 33.333%;
   display: flex;
@@ -1918,7 +2336,8 @@ input {
   border-bottom: 1px solid black;
 }
 
-#birthDate_1, #birthDate_2 {
+#birthDate_1,
+#birthDate_2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1950,7 +2369,7 @@ input {
 }
 
 #st6 span {
-  padding-left: .2%;
+  padding-left: 0.2%;
 }
 
 #second {
@@ -2029,7 +2448,9 @@ input {
   height: 100%;
 }
 
-#cityBel, #districtBel, #regionBel {
+#cityBel,
+#districtBel,
+#regionBel {
   width: 100%;
   height: 25%;
   display: flex;
@@ -2056,7 +2477,9 @@ input {
   height: 100%;
 }
 
-#cityRus, #districtRus, #regionRus {
+#cityRus,
+#districtRus,
+#regionRus {
   width: 100%;
   height: 25%;
   display: flex;
@@ -2118,7 +2541,8 @@ input {
   height: 50%;
 }
 
-#sexM, #sexW {
+#sexM,
+#sexW {
   width: 50%;
   height: 100%;
   display: flex;
@@ -2128,11 +2552,13 @@ input {
   border-bottom: 1px solid black;
 }
 
-#sexM input, #sexW input {
+#sexM input,
+#sexW input {
   display: none;
 }
 
-#sexM label, #sexW label {
+#sexM label,
+#sexW label {
   color: #000;
   cursor: default;
   font-weight: normal;
@@ -2141,7 +2567,8 @@ input {
   vertical-align: middle;
 }
 
-#sexM label:before, #sexW label:before {
+#sexM label:before,
+#sexW label:before {
   content: " ";
   color: #000;
   display: inline-block;
@@ -2151,16 +2578,18 @@ input {
   text-indent: 0px;
   width: 2rem;
   height: 2rem;
-  background: #FFF;
+  background: #fff;
   border-image: initial;
   vertical-align: middle;
 }
 
-#sexM label:hover, #sexW label:hover {
+#sexM label:hover,
+#sexW label:hover {
   border: 1px solid black;
 }
 
-#sexM input:checked + label:before, #sexW input:checked + label:before {
+#sexM input:checked + label:before,
+#sexW input:checked + label:before {
   content: "X";
 }
 
@@ -2213,8 +2642,6 @@ input {
   align-items: center;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
-
-
 }
 
 #sp3 {
@@ -2267,7 +2694,8 @@ input {
   padding-left: 5%;
 }
 
-#sp32, #sp33 {
+#sp32,
+#sp33 {
   width: 28.833%;
   height: 100%;
 }
@@ -2277,9 +2705,12 @@ input {
   height: 100%;
 }
 
-#fatherLastNameBel, #motherLastNameBel,
-#fatherFirstNameBel, #motherFirstNameBel,
-#fatherMiddleNameBel, #motherMiddleNameBel {
+#fatherLastNameBel,
+#motherLastNameBel,
+#fatherFirstNameBel,
+#motherFirstNameBel,
+#fatherMiddleNameBel,
+#motherMiddleNameBel {
   width: 100%;
   height: 33.333%;
   display: flex;
@@ -2287,11 +2718,10 @@ input {
   justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
-
-
 }
 
-#spouseLastNameBel, #spouseMiddleNameBel {
+#spouseLastNameBel,
+#spouseMiddleNameBel {
   width: 100%;
   height: 33.334%;
   display: flex;
@@ -2299,8 +2729,6 @@ input {
   justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
-
-
 }
 
 #spouseFirstNameBel {
@@ -2367,8 +2795,6 @@ input {
   justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
-
-
 }
 
 #birthDate_5 {
@@ -2573,35 +2999,43 @@ input {
   border-bottom: 1px solid black;
 }
 
-#single input, #divorced input, #widow input {
+#single input,
+#divorced input,
+#widow input {
   display: none;
 }
 
-#single label, #divorced label, #widow label {
+#single label,
+#divorced label,
+#widow label {
   color: #000;
   cursor: default;
   font-weight: normal;
-  padding: .4rem 0;
+  padding: 0.4rem 0;
   vertical-align: middle;
 }
 
-#single label:before, #divorced label:before, #widow label:before {
+#single label:before,
+#divorced label:before,
+#widow label:before {
   content: " ";
   color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
-  font: 1.0rem Arial;
+  font: 1rem Arial;
   position: relative;
   text-indent: 0px;
   width: 2rem;
-  height: .5rem;
-  background: #FFF;
+  height: 0.5rem;
+  background: #fff;
   border-image: initial;
   vertical-align: middle;
 }
 
-#single label:hover, #divorced label:hover, #widow label:hover {
+#single label:hover,
+#divorced label:hover,
+#widow label:hover {
   border: 1px solid black;
 }
 
@@ -2686,7 +3120,9 @@ input {
   flex-direction: column;
 }
 
-#child_1, #child_2, #child_3 {
+#child_1,
+#child_2,
+#child_3 {
   width: 100%;
   height: 33.333333333%;
   display: flex;
@@ -2705,7 +3141,9 @@ input {
   flex-direction: column;
 }
 
-#childLastName_1, #childLastName_2, #childLastName_3 {
+#childLastName_1,
+#childLastName_2,
+#childLastName_3 {
   width: 100%;
   height: 33.333333333%;
   display: flex;
@@ -2723,7 +3161,9 @@ input {
   flex-direction: column;
 }
 
-#childFirstName_1, #childFirstName_2, #childFirstName_3 {
+#childFirstName_1,
+#childFirstName_2,
+#childFirstName_3 {
   width: 100%;
   height: 33.333333333%;
   display: flex;
@@ -2741,7 +3181,9 @@ input {
   flex-direction: column;
 }
 
-#childMiddleName_1, #childMiddleName_2, #childMiddleName_3 {
+#childMiddleName_1,
+#childMiddleName_2,
+#childMiddleName_3 {
   width: 100%;
   height: 33.333333333%;
   display: flex;
@@ -2759,7 +3201,9 @@ input {
   flex-direction: column;
 }
 
-#childBirthDate_day_1, #childBirthDate_day_2, #childBirthDate_day_3 {
+#childBirthDate_day_1,
+#childBirthDate_day_2,
+#childBirthDate_day_3 {
   width: 100%;
   height: 33.333333333%;
   display: flex;
@@ -2777,7 +3221,9 @@ input {
   flex-direction: column;
 }
 
-#childBirthDate_month_1, #childBirthDate_month_2, #childBirthDate_month_3 {
+#childBirthDate_month_1,
+#childBirthDate_month_2,
+#childBirthDate_month_3 {
   width: 100%;
   height: 33.333333333%;
   display: flex;
@@ -2795,7 +3241,9 @@ input {
   flex-direction: column;
 }
 
-#childBirthDate_year_1, #childBirthDate_year_2, #childBirthDate_year_3 {
+#childBirthDate_year_1,
+#childBirthDate_year_2,
+#childBirthDate_year_3 {
   width: 100%;
   height: 33.333333333%;
   display: flex;
@@ -2863,7 +3311,8 @@ input {
   flex-direction: column;
 }
 
-#addressBel, #addressRus {
+#addressBel,
+#addressRus {
   width: 100%;
   height: 50%;
   display: flex;
@@ -2871,15 +3320,13 @@ input {
   justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
-
-
 }
 
-#addressBel input, #addressRus input {
+#addressBel input,
+#addressRus input {
   width: 98%;
   height: 93%;
 }
-
 
 #twoPage {
   display: flex;
@@ -2894,7 +3341,6 @@ input {
   display: flex;
   align-items: center;
   border: 1px solid black;
-
 }
 
 #sl1 span {
@@ -2910,8 +3356,6 @@ input {
   border-left: 1px solid black;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
-
-
 }
 
 #abroad_1 input {
@@ -3116,8 +3560,6 @@ input {
   align-items: center;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
-
-
 }
 
 #sl7 {
@@ -3143,8 +3585,6 @@ input {
   border-right: 1px solid black;
   border-left: 1px solid black;
   border-bottom: 1px dashed black;
-
-
 }
 
 #docName1_2 {
@@ -3156,8 +3596,6 @@ input {
   border-right: 1px solid black;
   border-left: 1px solid black;
   border-bottom: 1px solid black;
-
-
 }
 
 #docSeries_1 {
@@ -3168,8 +3606,6 @@ input {
   justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
-
-
 }
 
 #docNum_1 {
@@ -3180,8 +3616,6 @@ input {
   justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
-
-
 }
 
 #sl74 {
@@ -3206,8 +3640,6 @@ input {
   justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px dashed black;
-
-
 }
 
 #docDate1_2 {
@@ -3218,8 +3650,6 @@ input {
   justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px dashed black;
-
-
 }
 
 #docDate1_3 {
@@ -3230,8 +3660,6 @@ input {
   justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px dashed black;
-
-
 }
 
 #docRegOfficeNum_1 {
@@ -3242,8 +3670,6 @@ input {
   justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
-
-
 }
 
 #docDepartName1 {
@@ -3261,8 +3687,6 @@ input {
   justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px dashed black;
-
-
 }
 
 #docDepartName1_2 {
@@ -3273,8 +3697,6 @@ input {
   justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
-
-
 }
 
 #sl8 {
@@ -3300,8 +3722,6 @@ input {
   border-right: 1px solid black;
   border-left: 1px solid black;
   border-bottom: 1px dashed black;
-
-
 }
 
 #docName2_2 {
@@ -3313,8 +3733,6 @@ input {
   border-right: 1px solid black;
   border-left: 1px solid black;
   border-bottom: 1px solid black;
-
-
 }
 
 #docSeries_2 {
@@ -3325,8 +3743,6 @@ input {
   justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
-
-
 }
 
 #docNum_2 {
@@ -3337,8 +3753,6 @@ input {
   justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
-
-
 }
 
 #sl84 {
@@ -3363,8 +3777,6 @@ input {
   justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px dashed black;
-
-
 }
 
 #docDate2_2 {
@@ -3375,8 +3787,6 @@ input {
   justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px dashed black;
-
-
 }
 
 #docDate2_3 {
@@ -3387,8 +3797,6 @@ input {
   justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px dashed black;
-
-
 }
 
 #docRegOfficeNum_2 {
@@ -3399,8 +3807,6 @@ input {
   justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
-
-
 }
 
 #docDepartName2 {
@@ -3418,8 +3824,6 @@ input {
   justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px dashed black;
-
-
 }
 
 #docDepartName2_2 {
@@ -3430,8 +3834,6 @@ input {
   justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
-
-
 }
 
 #sl9 {
@@ -3457,8 +3859,6 @@ input {
   border-right: 1px solid black;
   border-left: 1px solid black;
   border-bottom: 1px dashed black;
-
-
 }
 
 #docName3_2 {
@@ -3514,8 +3914,6 @@ input {
   justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px dashed black;
-
-
 }
 
 #docDate3_2 {
@@ -3526,8 +3924,6 @@ input {
   justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px dashed black;
-
-
 }
 
 #docDate3_3 {
@@ -3538,8 +3934,6 @@ input {
   justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px dashed black;
-
-
 }
 
 #docRegOfficeNum_3 {
@@ -3567,8 +3961,6 @@ input {
   justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px dashed black;
-
-
 }
 
 #docDepartName3_2 {
@@ -3592,7 +3984,7 @@ input {
 }
 
 #sl10 span {
-  margin-left: .7%;
+  margin-left: 0.7%;
 }
 
 #sl11 {
@@ -3626,8 +4018,6 @@ input {
   justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
-
-
 }
 
 #date_5 {
@@ -3638,8 +4028,6 @@ input {
   justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
-
-
 }
 
 #date_6 {
@@ -3650,8 +4038,6 @@ input {
   justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
-
-
 }
 
 #sl12 {
@@ -3672,7 +4058,8 @@ input {
   border-bottom: 1px solid black;
 }
 
-#sl121 span, #sl121 small {
+#sl121 span,
+#sl121 small {
   padding-left: 3%;
 }
 
@@ -3684,8 +4071,6 @@ input {
   justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
-
-
 }
 
 #emplName_2 input {
@@ -3693,7 +4078,8 @@ input {
   height: 94%;
 }
 
-#date_7, #date_8 {
+#date_7,
+#date_8 {
   width: 4.21%;
   height: 100%;
   display: flex;
@@ -3701,8 +4087,6 @@ input {
   justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
-
-
 }
 
 #date_9 {
@@ -3713,8 +4097,6 @@ input {
   justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
-
-
 }
 
 #sl13 {
@@ -3735,7 +4117,8 @@ input {
   border-bottom: 1px solid black;
 }
 
-#sl131 span, #sl131 small {
+#sl131 span,
+#sl131 small {
   padding-left: 3%;
 }
 
@@ -3895,7 +4278,8 @@ input {
   flex-direction: row;
 }
 
-#date_10, #date_11 {
+#date_10,
+#date_11 {
   width: 28.22%;
   height: 100%;
   display: flex;
@@ -3903,8 +4287,6 @@ input {
   justify-content: center;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
-
-
 }
 
 #date_12 {
@@ -4168,7 +4550,9 @@ input {
   font-size: 1.5rem;
 }
 
-#sl17221, #sl17222, #sl17223 {
+#sl17221,
+#sl17222,
+#sl17223 {
   width: 8.333%;
   height: 100%;
   display: flex;
@@ -4183,9 +4567,14 @@ input {
   font-size: 1.5rem;
 }
 
-#phoneNumber_1, #phoneNumber_2, #phoneNumber_3,
-#phoneNumber_4, #phoneNumber_5, #phoneNumber_6,
-#phoneNumber_7, #phoneNumber_8 {
+#phoneNumber_1,
+#phoneNumber_2,
+#phoneNumber_3,
+#phoneNumber_4,
+#phoneNumber_5,
+#phoneNumber_6,
+#phoneNumber_7,
+#phoneNumber_8 {
   width: 8.333%;
   height: 100%;
   display: flex;

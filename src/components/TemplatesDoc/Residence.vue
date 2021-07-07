@@ -13,6 +13,7 @@
                 type="checkbox"
                 id="citizenship1"
                 v-model="allDivsWithInput.citizenship.citizenship_1"
+                @click="clearCitizenship_2"
               />
               <label for="citizenship1"></label>
             </div>
@@ -24,6 +25,7 @@
                 type="checkbox"
                 id="citizenship2"
                 v-model="allDivsWithInput.citizenship.citizenship_2"
+                @click="clearCitizenship_1"
               />
               <label for="citizenship2"></label>
             </div>
@@ -421,6 +423,7 @@
                     type="checkbox"
                     id="check1"
                     v-model="allDivsWithInput.sexM"
+                    @click="clearSexW"
                   /><label for="check1"></label>
                 </div>
                 <div id="sexW">
@@ -428,6 +431,7 @@
                     type="checkbox"
                     id="check2"
                     v-model="allDivsWithInput.sexW"
+                    @click="clearSexM"
                   /><label for="check2"></label>
                 </div>
               </div>
@@ -1580,6 +1584,20 @@ export default {
       serviceLabels: "",
     },
   }),
+  methods: {
+    clearSexW() {
+      this.allDivsWithInput.sexW = '';
+    },
+    clearSexM() {
+      this.allDivsWithInput.sexM = '';
+    },
+    clearCitizenship_2() {
+      this.allDivsWithInput.citizenship.citizenship_2 = ''
+    },
+    clearCitizenship_1() {
+      this.allDivsWithInput.citizenship.citizenship_1 = ''
+    },
+  },
   created() {
     bus.$on('send-residence-data', async (email) => {
       const data = {
@@ -1595,12 +1613,12 @@ export default {
       })
       const result = await response.ok;
       if (result) {
-        alert('Сообщение отправлено!');
+        alert(this.$i18n.t("messageSent"));
       } else {
-        alert('Ошибка!');
+        alert(this.$i18n.t("error"));
       }
     })
-  }
+  },
 };
 </script>
 
@@ -1635,6 +1653,10 @@ export default {
 
   * {
     line-height: 0.75rem;
+  }
+
+  body {
+    overflow: hidden;
   }
 }
 
@@ -3168,7 +3190,7 @@ textarea {
 }
 
 #legalStatus {
-  width: 100%;
+  width: 85.03%;
   height: 100%;
   display: flex;
   align-items: center;

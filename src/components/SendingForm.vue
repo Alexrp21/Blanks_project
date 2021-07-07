@@ -4,11 +4,11 @@
       <v-tabs v-model="tab" style="padding-top: 15px">
         <v-tab>
           <v-icon left>mdi-email-newsletter</v-icon>
-          Отправить по адресу
+          {{ $t("sendToAddress") }}
         </v-tab>
         <v-tab>
           <v-icon left>mdi-card-account-mail</v-icon>
-          Отправить в отдел по гражданству и миграции
+          {{ $t("sendToDepartment") }}
         </v-tab>
         <v-tabs-items v-model="tab" style="padding: 20px 0 20px 0">
           <v-tab-item>
@@ -38,14 +38,14 @@
                   :rules="requiredRules"
                   :items="orderNames"
                   type="text"
-                  label="Введите название отделения"
+                  :label="$t('enterDepartName')"
                   style="
                     width: 90%;
                     margin: auto;
                     margin-top: 10px;
                     padding-bottom: 30px;
                   "
-                  placeholder="Выберите отделение из списка"
+                  :placeholder="$t('selectInList')"
                   required
                 ></v-autocomplete>
               </v-card>
@@ -56,9 +56,37 @@
     </template>
 
     <div class="buttons">
-      <v-btn color="#64DD17" @click="sendToCurrentMail" :disabled="validInput"
-        >Отправить</v-btn
-      >
+      <v-dialog v-model="dialog" persistent max-width="290">
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+            v-bind="attrs"
+            v-on="on"
+            color="#64DD17"
+            :disabled="validInput"
+            >{{ $t("sendButton") }}</v-btn
+          >
+        </template>
+        <v-card>
+          <v-card-title style="font-size: 18px; line-height: 25px">
+            {{ $t("privacyPolicyWindowTitle") }}
+          </v-card-title>
+          <v-card-text>
+            <div @click="emitCloseFormEvent" style="text-align: center">
+              <router-link to="/privace-policy">{{
+                $t("privacyPolicyWindowText")
+              }}</router-link>
+            </div>
+          </v-card-text>
+          <v-card-actions class="buttons">
+            <v-btn color="green darken-1" text @click="sendToCurrentMail">
+              {{ $t("agree") }}
+            </v-btn>
+            <v-btn color="green darken-1" text @click="dialog = false">
+              {{ $t("disagree") }}
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
 
       <v-alert
         :value="alert"
@@ -70,12 +98,12 @@
         dismissible
         style="position: absolute; z-index: 1"
       >
-        Откройте шаблон который хотите отправить
+        {{ $t("sendFormWarningMessage") }}
       </v-alert>
 
-      <v-btn @click="emitCloseFormEvent" color="#D84315" style="color: white"
-        >Отменить</v-btn
-      >
+      <v-btn @click="emitCloseFormEvent" color="#D84315" style="color: white">{{
+        $t("canselButton")
+      }}</v-btn>
     </div>
   </v-form>
 </template>
@@ -86,7 +114,8 @@ import { bus } from "@/main";
 const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
 
 export default {
-  data: () => ({
+  data: (_t) => ({
+    dialog: false,
     tab: null,
     alert: false,
     valid1: false,
@@ -95,18 +124,20 @@ export default {
     currentOrderEmail: "",
     emailAddress: "",
     emailRules: [
-      (v) => !!v || "Поле не может быть пустым",
-      (v) => emailRegex.test(v) || "Укажите корректный Email",
+      (v) => !!v || _t.$i18n.t("sendFormEmailValidEmpty"),
+      (v) => emailRegex.test(v) || _t.$i18n.t("sendFormEmailValidCorrect"),
     ],
-    requiredRules: [(v) => !!v || "Поле не может быть пустым"],
+    requiredRules: [(v) => !!v || _t.$i18n.t("sendFormEmailValidEmpty")],
     orderNames: ["test1", "test2"],
     orderEmails: ["test1@mail.ru", "test2@mail.ru"],
   }),
   methods: {
     emitCloseFormEvent() {
+      this.dialog = false;
       this.$emit("close-form");
     },
     sendToCurrentMail() {
+      this.dialog = false;
       if (this.tab == 0) {
         if (this.$refs.myemail.validate()) {
           if (this.$route.name === "passport") {
