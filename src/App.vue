@@ -228,6 +228,6 @@ export default {
 }
 
 .opasityLang {
-  opacity: 30%;
+  opacity: 30% !important;
 }
 </style>
